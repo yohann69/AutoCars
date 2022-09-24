@@ -1,0 +1,22 @@
+{
+  "name": "autocars",
+  "version": "1.0.0",
+  "description": "A webapp project for a school work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohann69/AutoCars.git"
+  },
+  "author": "Yohann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohann69/AutoCars/issues"
+  },
+  "homepage": "https://github.com/yohann69/AutoCars#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
