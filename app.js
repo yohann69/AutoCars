@@ -1,4 +1,3 @@
-const fs = require('fs');
 const express = require('express');
 const morgan = require('morgan');
 
@@ -10,9 +9,11 @@ const operationRouter = require('./routes/operationRoutes');
 
 const app = express();
 
-app.use(morgan('dev'));
 app.use(express.json());
 
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+}
 
 app.use(express.static(`${__dirname}/public`))
 
@@ -32,9 +33,6 @@ app.use((req, res, next) => {
 //         .status(200)
 //         .json({message: 'Hello World!', app: "AutoCars"});
 // })
-// app.post('/', (req, res) => {
-//     res.send('POST request to the homepage');
-// });
 
 
 // app.get('/api/v1/operations', getAllOperations);

@@ -1,8 +1,8 @@
 const fs = require('fs');
-const { toUSVString } = require('util');
+
 const operations = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/operations.json`))
 
-exports.checkID = (req, res, next, val) => {
+exports.checkID = (req, res, next) => {
     if (req.params.id * 1 > operations.length) {
         return res.status(404).json({
             status: 'Error',
@@ -66,6 +66,7 @@ exports.createOperation = (req, res) => {
                 operation: newOperation
             }
         })
+        if (err) console.log(err);
     })
 
     // res.send('Done');
