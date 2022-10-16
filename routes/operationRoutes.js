@@ -3,11 +3,12 @@ const operationController = require('./../controllers/operationController');
 
 const router = express.Router();
 
+router.param('id', operationController.checkID);
 
 router
     .route('/')
     .get(operationController.getAllOperations)
-    .post(operationController.createOperation);
+    .post(operationController.checkBody, operationController.createOperation);
 
 
 router

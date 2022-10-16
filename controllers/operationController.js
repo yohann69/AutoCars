@@ -1,5 +1,28 @@
 const fs = require('fs');
+const { toUSVString } = require('util');
 const operations = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/operations.json`))
+
+exports.checkID = (req, res, next, val) => {
+    if (req.params.id * 1 > operations.length) {
+        return res.status(404).json({
+            status: 'Error',
+            message: 'Invalid ID'
+        })
+    }
+    next();
+}
+
+exports.checkBody = (req, res, next) => {
+    if (!req.body.name || !req.body.price) {
+        return res.status(400).json({
+            status: 'Error',
+            message: 'Specify a price and a name'
+        })
+    }
+    next();
+}
+
+
 
 
 exports.getAllOperations = (req, res) => {
@@ -18,20 +41,15 @@ exports.getOperation = (req, res) => {  // For optional parameters add ? at the 
     const id = parseInt(req.params.id);
     const operation = operations.find(element => element.id === id);
 
-    if (!operation) {
-        res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        })
-    } else {
-        res.status(200).json({
-            status: 'success',
-            results: operations.length,
-            data: {
-                operation
-            }
-        })
-    }
+
+    res.status(200).json({
+        status: 'success',
+        results: operations.length,
+        data: {
+            operation
+        }
+    })
+
 }
 
 exports.createOperation = (req, res) => {
@@ -54,40 +72,18 @@ exports.createOperation = (req, res) => {
 }
 
 exports.updateOperation = (req, res) => {
-    const id = parseInt(req.params.id);
-    const operation = operations.find(element => element.id === id);
-
-    if (!operation) {
-        res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        })
-    } else {
-
-        res.status(200).json({
-            status: 'success',
-            data: {
-                operation: '<Updated operation here>'
-            }
-        })
-    }
+    res.status(200).json({
+        status: 'success',
+        data: {
+            operation: '<Updated operation here>'
+        }
+    })
 }
 
 exports.deleteOperation = (req, res) => {
-    const id = parseInt(req.params.id);
-    const operation = operations.find(element => element.id === id);
-
-    if (!operation) {
-        res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        })
-    } else {
-
-        res.status(200).json({
-            status: 'success',
-            data: null
-        })
-    }
+    res.status(200).json({
+        status: 'success',
+        data: null
+    })
 }
 
