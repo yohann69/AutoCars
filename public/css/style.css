@@ -1,6 +1,11 @@
 :root {
 	--border-norm: 8px;
 	--blur-norm: 50px;
+
+
+
+	/* Colors */
+	--bg-primary: #000000a8;
 }
 
 * {
@@ -21,7 +26,6 @@ html {
 	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* background-color: black; */
 }
 body {
 	height: 100vh;
@@ -43,14 +47,18 @@ main > section {
 	display: flex;
 	width: 850px;
 	height: 500px;
-	background-color: #007aab;
+	background-color: ;
 	border-radius: var(--border-norm);
 }
 #login,
 #logo {
 	width: 50%;
 }
-
+#logo{
+	border-top-right-radius: var(--border-norm);
+	border-bottom-right-radius: var(--border-norm);
+	background-color: rgb(28, 115, 181);
+}
 form {
 	display: flex;
 	justify-content: space-around;
@@ -70,7 +78,7 @@ form {
 }
 
 #login {
-	background-color: #141414;
+	background-color: var(--bg-primary);
 	border-top-left-radius: var(--border-norm);
 	border-bottom-left-radius: var(--border-norm);
 }
@@ -144,7 +152,7 @@ nav p:hover:after {
 }
 
 .btn-menu{
-	background-color: #000000a8;
+	background-color: var(--bg-primary);
 	width: 300px;
 	height: 300px;
 	border-radius: var(--border-norm);
