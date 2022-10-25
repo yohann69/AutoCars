@@ -26,33 +26,27 @@
     </nav>
 
     <main class="menu">
-        <a href="#">
-            <article class="btn-menu rdv">
-                <img src="img/rdv.png" alt="Rendez-vous">
-                <h2>Rendez-vous</h2>
-            </article>
-        </a>
 
-        <a href="#">
-            <article class="btn-menu client">
-                <img src="img/client.png" alt="Client">
-                <h2>Clients et Véhicules</h2>
-            </article>
-        </a>
+        <article class="btn-menu rdv">
+            <img src="img/rdv.png" alt="Rendez-vous">
+            <h2>Rendez-vous</h2>
+        </article>
 
-        <a href="#">
-            <article class="btn-menu facture">
-                <img src="img/factures.png" alt="Factures">
-                <h2>Factures</h2>
-            </article>
-        </a>
+        <article class="btn-menu client">
+            <img src="img/client.png" alt="Client">
+            <h2>Clients et Véhicules</h2>
+        </article>
 
-        <a href="#">
-            <article class="btn-menu piece">
-                <img src="img/pieces.png" alt="Pièces">
-                <h2>Pièces</h2>
-            </article>
-        </a>
+        <article class="btn-menu facture">
+            <img src="img/factures.png" alt="Factures">
+            <h2>Factures</h2>
+        </article>
+
+        <article class="btn-menu piece">
+            <img src="img/pieces.png" alt="Pièces">
+            <h2>Pièces</h2>
+        </article>
+
 
     </main>
 
@@ -75,7 +69,7 @@
         <button class="back">✖</button>
     </section>
 
-    <section class="popupmenu client-full">
+    <section class="popupmenu client-full hidden">
         <main class="menu">
             <a href="#">
                 <article class="btn-menu listclient">
@@ -101,25 +95,43 @@
         <button class="back">✖</button>
     </section>
 
-    <section class="popupmenu rdv-facture hidden">
+    <section class="popupmenu facture-full hidden">
         <main class="menu">
             <a href="#">
                 <article class="btn-menu client">
-                    <img src="img/client.png" alt="Client">
-                    <h2>Clients et Véhicules</h2>
+                    <img src="img/createFacture.png" alt="Créer facture">
+                    <h2>Créer une facture</h2>
                 </article>
             </a>
 
             <a href="#">
                 <article class="btn-menu facture">
-                    <img src="img/factures.png" alt="Factures">
-                    <h2>Factures</h2>
+                    <img src="img/factures.png" alt="Liste factures">
+                    <h2>Consulter les factures</h2>
                 </article>
             </a>
         </main>
         <button class="back">✖</button>
     </section>
 
+    <section class="popupmenu pieces-full hidden">
+        <main class="menu">
+            <a href="#">
+                <article class="btn-menu client">
+                    <img src="img/pieces.png" alt="Liste Pièces">
+                    <h2>Consulter le stock <br> des pièces</h2>
+                </article>
+            </a>
+
+            <a href="#">
+                <article class="btn-menu facture">
+                    <img src="img/buyPieces.png" alt="Factures">
+                    <h2>Commander des pièces</h2>
+                </article>
+            </a>
+        </main>
+        <button class="back">✖</button>
+    </section>
 
 
     <script src="js/script.js"></script>
