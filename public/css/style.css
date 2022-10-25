@@ -5,7 +5,8 @@
 
 
 	/* Colors */
-	--bg-primary: #000000a8;
+	--bg-primary: #0000009c;
+	--discrete-text: #696969;
 }
 
 * {
@@ -146,7 +147,7 @@ nav p:hover:after {
 }
 .menu{
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap; 
 	width: 100%;
 	justify-content: space-around;
 }
@@ -173,3 +174,43 @@ nav p:hover:after {
 .btn-menu > img {
 	width: 150px;
 }
+
+.popupmenu{
+	position: absolute;
+	width: 95%;
+	height: 60%;
+	background-color: #1b1b1be9;
+	border-radius: var(--border-norm);
+	-webkit-backdrop-filter: blur(var(--blur-norm));
+	backdrop-filter: blur(var(--blur-norm));
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu a {
+	text-decoration: none;
+}
+
+
+.back{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #00000000;
+	border: none;
+	font-size: 140%;
+	color: var(--discrete-text);
+}
+.back:hover{
+	color: #ffffff;
+	font-size: 150%;
+}
+
+
+.hidden{
+	display: none;
+}
+
