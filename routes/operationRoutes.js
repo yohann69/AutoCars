@@ -3,7 +3,7 @@ const operationController = require('../controllers/operationController');
 
 const router = express.Router();
 
-router.param('id', operationController.checkID);
+// router.param('id', operationController.checkID);
 
 router
     .route('/')

@@ -1,16 +1,4 @@
-const fs = require('fs');
-
-const operations = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/operations.json`))
-
-exports.checkID = (req, res, next) => {
-    if (req.params.id * 1 > operations.length) {
-        return res.status(404).json({
-            status: 'Error',
-            message: 'Invalid ID'
-        })
-    }
-    next();
-}
+const Operation = require('./../models/operationModel')
 
 exports.checkBody = (req, res, next) => {
     if (!req.body.name || !req.body.price) {
@@ -28,11 +16,11 @@ exports.checkBody = (req, res, next) => {
 exports.getAllOperations = (req, res) => {
     res.status(200).json({
         status: 'success',
-        results: operations.length,
-        data: {
-            requestedAt: req.requestTime,
-            operations: operations
-        }
+        requestedAt: req.requestTime,
+        // results: operations.length,
+        // data: {
+        //     operations: operations
+        // }
     })
 }
 
@@ -42,34 +30,24 @@ exports.getOperation = (req, res) => {  // For optional parameters add ? at the 
     const operation = operations.find(element => element.id === id);
 
 
-    res.status(200).json({
-        status: 'success',
-        results: operations.length,
-        data: {
-            operation
-        }
-    })
+    // res.status(200).json({
+    //     status: 'success',
+    //     results: operations.length,
+    //     data: {
+    //         operation
+    //     }
+    // })
 
 }
 
 exports.createOperation = (req, res) => {
-    // console.log(req.body);
-
-    const newID = operations[operations.length - 1].id + 1;
-    const newOperation = Object.assign({ id: newID }, req.body);
-
-    operations.push(newOperation);
-    fs.writeFile(`${__dirname}/dev-data/data/operations.json`, JSON.stringify(operations), err => {
-        res.status(201).json({
-            status: 'success',
-            data: {
-                operation: newOperation
-            }
-        })
-        if (err) console.log(err);
+   
+    res.status(201).json({
+        status: 'Success',
+        // data: {
+        //     operation: newOperation
+        // }
     })
-
-    // res.send('Done');
 }
 
 exports.updateOperation = (req, res) => {
