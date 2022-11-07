@@ -34,14 +34,33 @@ body {
 	overflow: hidden;
 	-webkit-backdrop-filter: blur(var(--blur-norm));
 	backdrop-filter: blur(var(--blur-norm));
+	
 }
 
-body,
-main > section {
+body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	
+}
+
+main{
+	height: 86vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius: var(--border-norm);
+	border-top-right-radius: var(--border-norm);
+	width: 98%;
+	-webkit-backdrop-filter: blur(var(--blur-norm));
+	backdrop-filter: var(--blur-norm);
+
+}
+
+
+body{
+	justify-content: flex-end;
 }
 
 .login {
@@ -95,6 +114,14 @@ label {
 	color: white;
 }
 
+h2{
+	font-size: 200%;
+}
+
+h3{
+	font-size: 140%;
+}
+
 article{
 	margin: 10px;
 }
@@ -117,7 +144,10 @@ nav {
 	box-shadow: 0px 8px 16px hsl(0deg 0% 0% / 14%);
 	padding: 0px 20px;
 }
-nav p, nav img {
+nav a{
+	text-decoration: none;
+}
+nav a, nav img {
 	filter: invert(1);
 }
 nav > section {
@@ -133,7 +163,7 @@ nav img {
 	width: 50px;
 	/* height: 20px; */
 }
-nav p:hover:after {
+nav a:hover:after {
 	background-color: #141414;
 	height: 2px;
 	width: 100px;
@@ -145,7 +175,7 @@ nav p:hover:after {
 }
 
 
-.nav-left p {
+.nav-left a {
 	width: 200px;
 	text-align: center;
 }
@@ -192,6 +222,7 @@ nav p:hover:after {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	top: 25%;
 }
 
 .menu a {
@@ -218,3 +249,65 @@ nav p:hover:after {
 	display: none;
 }
 
+
+
+
+
+/*---------------------------------------------------
+					Create User
+---------------------------------------------------*/
+.interface{
+	background-color: #0000009d;	
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-bottom: 50px;
+}
+
+
+.interface form>section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.interface form .btn{
+	flex-direction: row;
+}
+
+.interface form>section>div{
+	margin: 20px;
+	padding: 40px 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #00000097;
+	border-radius: var(--border-norm);
+}
+
+.interface form input[type="text"]{
+	width: 300px;
+}
+
+.interface form .btn{
+	margin-top: 50px;
+}
+
+input{
+	margin: 5px 0;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------
+					Create RDV
+--------------------------------------------------*/
+
+.client{
+	align-items: center;
+}
+
+					
