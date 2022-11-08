@@ -31,28 +31,83 @@
             <form class="createrdv">
                 <section>
                     <div class="client">
-                        <h3>Client</h3>
-                        <input type="text" class="fname" placeholder="Recherche un client" required>
-                        
+                        <section>
+                            <h3>Client</h3>
+                            <input type="text" class="usersearchbar" placeholder="Recherche un client" list="clientlist"
+                                required>
+                            <datalist id="clientlist">
+                                <option value="Michel Dupont"></option>
+                                <option value="Albert Martin"></option>
+                            </datalist>
+                        </section>
+
+
                         <section class="clientdetails">
-                            <label for="fname">Nom</label>
-                            <input type="text" class="lname" placeholder="Duchemin" required>
+                            <div>
+                                <label for="lname">Nom</label>
+                                <input type="text" class="lname" placeholder="Duchemin" disabled>
+                            </div>
+                            <div>
+                                <label for="fname">Prénom</label>
+                                <input type="text" class="lname" placeholder="Partice" disabled>
+                            </div>
+                            <div>
+                                <label for="adress">Rue</label>
+                                <input type="text" class="adress" placeholder="1a rue des lilas" disabled>
+                            </div>
+                            <div>
+                                <label for="cp">Code postal</label>
+                                <input type="number" class="cp" placeholder="26000" disabled>
+                                <label for="ville">Ville</label>
+                                <input type="text" class="ville" placeholder="Valence" disabled>
+                            </div>
+                            <div>
+                                <label for="phone">Téléphone</label>
+                                <input type="text" class="phone" placeholder="06 78 13 30 95" disabled>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="text" class="email" placeholder="patrice.duchemin@gmail.com" disabled>
+                            </div>
                         </section>
                     </div>
-                    <div class="role">
-                        <h3>Rôle</h3>
-                        <div>
-                            <input type="radio" name="role" id="Administrateur" value="Administrateur" required>
-                            <label for="Administrateur">Administrateur</label><br>
-                        </div>
-                        <div>
-                            <input type="radio" name="role" id="Chef d'atelier" value="Chef d'atelier" required>
-                            <label for="Chef d'atelier">Chef d'atelier</label><br>
-                        </div>
-                        <div>
-                            <input type="radio" name="role" id="Employé" value="Employé" required>
-                            <label for="Employé">Employé</label>
-                        </div>
+
+
+
+                    <div class="vehicle">
+                        <section>
+                            <h3>Vehicule</h3>
+                            <input type="text" class="vehiclesearchbar" placeholder="Choisir un véhicule" list="vehiclelist"
+                                required>
+                            <datalist id="vehiclelist">
+                                <option value="Fiat Multipla"></option>
+                                <option value="Renaut Zoé"></option>
+                            </datalist>
+                        </section>
+
+
+                        <section class="vehicledetails">
+                            <div>
+                                <label for="brand">Marque</label>
+                                <input type="text" class="brand" placeholder="Fiat" disabled>
+                            </div>
+                            <div>
+                                <label for="model">Modèle</label>
+                                <input type="text" class="model" placeholder="Multipla" disabled>
+                            </div>
+                            <div>
+                                <label for="serialnumber">N° de série</label>
+                                <input type="text" class="serialnumber" placeholder="1897968269HA" disabled>
+                            </div>
+                            <div>
+                                <label for="immat">Immatriculation</label>
+                                <input type="text" class="immat" placeholder="DE-193-EA" disabled>
+                            </div>
+                            <div>
+                                <label for="drivingdate">Mise en circulation</label>
+                                <input type="date" class="drivingdate" placeholder="12/11/2007" disabled>
+                            </div>
+                        </section>
                     </div>
                     <div class="credentials">
                         <h3>Identifiants</h3>

@@ -103,12 +103,13 @@ form {
 	border-bottom-left-radius: var(--border-norm);
 }
 input {
-	background-color: #4a4a4a;
+	background-color: #5b5b5b7a;
 	border: none;
 	border-radius: var(--border-norm);
 	color: white;
 	padding: 10px 20px;
 	width: 1;
+	margin: 5px 0;
 }
 label {
 	color: white;
@@ -285,15 +286,11 @@ nav a:hover:after {
 }
 
 .interface form input[type="text"]{
-	width: 300px;
+	width: 350px;
 }
 
 .interface form .btn{
 	margin-top: 50px;
-}
-
-input{
-	margin: 5px 0;
 }
 
 
@@ -306,8 +303,44 @@ input{
 					Create RDV
 --------------------------------------------------*/
 
-.client{
+.client,.vehicle{
 	align-items: center;
 }
 
-					
+.client>section:first-child,.vehicle>section:first-child{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.clientdetails, .vehicledetails{
+	margin-top: 50px;
+}
+
+.usersearchbar, .vehiclesearchbar{
+	width: 400px !important;
+	border-radius: 100px;
+}
+
+.cp{
+	width: 60px !important;
+}
+
+.ville{
+	width: 200px !important;
+}
+
+.clientdetails>div,.vehicledetails>div{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.clientdetails>div label,.vehicledetails>div label{
+	margin: 0 10px;
+}
+
+
+.vehicledetails input[type="text"]{
+	width: 250px !important;
+}
