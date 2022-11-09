@@ -8,7 +8,7 @@ const router = express.Router();
 router
     .route('/')
     .get(operationController.getAllOperations)
-    .post(operationController.checkBody, operationController.createOperation);
+    .post(operationController.createOperation);
 
 
 router

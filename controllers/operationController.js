@@ -1,17 +1,5 @@
 const Operation = require('./../models/operationModel')
 
-exports.checkBody = (req, res, next) => {
-    if (!req.body.name || !req.body.price) {
-        return res.status(400).json({
-            status: 'Error',
-            message: 'Specify a price and a name'
-        })
-    }
-    next();
-}
-
-
-
 
 exports.getAllOperations = (req, res) => {
     res.status(200).json({
@@ -40,14 +28,22 @@ exports.getOperation = (req, res) => {  // For optional parameters add ? at the 
 
 }
 
-exports.createOperation = (req, res) => {
-   
-    res.status(201).json({
-        status: 'Success',
-        // data: {
-        //     operation: newOperation
-        // }
-    })
+exports.createOperation = async (req, res) => {
+    try {
+        const newOperation = await Operation.create(req.body);
+
+        res.status(201).json({
+            status: 'Success',
+            data: {
+                operation: newOperation
+            }
+        })
+    } catch (err) {
+        res.status(400).json({
+            status: 'Failed',
+            message: 'Invalid data sent'
+        })
+    }
 }
 
 exports.updateOperation = (req, res) => {
