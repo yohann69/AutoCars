@@ -63,9 +63,7 @@
 	padding: 0 10px;
 	text-decoration: none;
 }
-.operation ul{
-	padding-inline-start: 0;
-}
+
 .operation > div{
 	display: flex;
 	flex-direction: row;
