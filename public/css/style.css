@@ -284,6 +284,9 @@ nav a:hover:after {
 	padding-bottom: 50px;
 }
 
+.interface h3{
+	margin: 8px 0;
+}
 
 .interface form>section{
 	display: flex;
@@ -293,11 +296,12 @@ nav a:hover:after {
 
 .interface form .btn{
 	flex-direction: row;
+	margin-top: 25px;
 }
 
 .interface form>section>div{
-	margin: 20px;
-	padding: 40px 60px;
+	margin: 10px 20px;
+	padding: 20px 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -306,11 +310,7 @@ nav a:hover:after {
 }
 
 .interface form input[type="text"]{
-	width: 350px;
-}
-
-.interface form .btn{
-	margin-top: 50px;
+	width: 300px;
 }
 
 
@@ -319,71 +319,3 @@ nav a:hover:after {
 
 
 
-/*--------------------------------------------------
-					Create RDV
---------------------------------------------------*/
-
-.client,.vehicle{
-	align-items: center;
-}
-
-.client>section:first-child,.vehicle>section:first-child,.operation>section:first-child{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.clientdetails, .vehicledetails{
-	margin-top: 50px;
-}
-
-.usersearchbar, .vehiclesearchbar,.operationsearchbar{
-	width: 400px !important;
-	border-radius: 100px;
-}
-
-.cp{
-	width: 60px !important;
-}
-
-.ville{
-	width: 200px !important;
-}
-
-.clientdetails>div,.vehicledetails>div{
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-}
-
-.clientdetails>div label,.vehicledetails>div label{
-	margin: 0 10px;
-}
-
-
-.vehicledetails input[type="text"]{
-	width: 250px !important;
-}
-
-
-.operationlist ul{
-	max-height: 270px;
-	overflow: auto;
-}
-
-.operationlist li{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 10px 7px;
-	margin: 2px 0;
-	background-color: #5b5b5b7a;
-	border-radius: var(--border-norm);
-}
-.operationlist li *{
-	padding: 0 10px;
-	text-decoration: none;
-}
-.operation ul{
-	padding-inline-start: 0;
-}
