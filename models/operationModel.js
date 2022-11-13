@@ -5,11 +5,12 @@ const operationSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: [true, "Veuillez spécifier un nom"],
-		unique: true
+		unique: true,
+		trim: true
 	},
 	duration: {
 		type: Number,
-		default: 2
+		required: [true, "Veuillez spécifier une durée"]
 	},
 	price: {
 		type: Number,
