@@ -1,76 +1,73 @@
 [
 	{
-		"id": 9,
 		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"price": 50, 
+		"duration": 30
 	},
 	{
-		"id": 0,
-		"name": "Essuis Glace",
-		"type": "Changement",
-		"description": "Remplacement des essuis glaces"
+		"name": "Controle technique",
+		"price": 80,
+		"duration": 60
 	},
 	{
-		"id": 8,
-		"name": "Réparation du pare-brise",
-		"type": "Réparation",
-		"description": "Réparation du pare-brise abimé"
+		"name": "Vidange",
+		"price": 30,
+		"duration": 30
 	},
 	{
-		"id": 1,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Reparation",
+		"price": 100,
+		"duration": 120
 	},
 	{
-		"id": 2,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Devis",
+		"price": 50,
+		"duration": 30
 	},
 	{
-		"id": 3,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Ménage",
+		"price": 50,
+		"duration": 120
 	},
 	{
-		"id": 4,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Peinture",
+		"price": 100,
+		"duration": 70
 	},
 	{
-		"id": 5,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Réparation pare brise",
+		"price": 150,
+		"duration": 60
 	},
 	{
-		"id": 6,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Réparation pneu",
+		"price": 50,
+		"duration": 30
 	},
 	{
-		"id": 7,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Réparation vitre",
+		"price": 50,
+		"duration": 30
 	},
 	{
-		"id": 8,
-		"name": "Changement Peneux",
-		"type": "Changement",
-		"description": "Remplacement des peneux de la voiture"
+		"name": "Révision",
+		"price": 100,
+		"duration": 60
 	},
 	{
-		"id": 9,
-		"name": "efz",
-		"type": "fez",
-		"description": "Remplfezfzeure"
+		"name": "Mise à jour du système de bord",
+		"price": 30,
+		"duration": 60
+	},
+	{
+		"name": "Mise à jour du système de navigation",
+		"price": 30,
+		"duration": 60
+	},
+	{
+		"name": "Changement des freins",
+		"price": 100,
+		"duration": 60
 	}
-	
 	
 ]

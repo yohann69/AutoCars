@@ -1,11 +1,26 @@
+const { query } = require('express');
 const Operation = require('./../models/operationModel')
 
 
 exports.getAllOperations = async (req, res) => {
-
     try {
-        const operations = await Operation.find()
+        const queryObj = { ...req.query }; // ... = destruturing query object
+        const excludedFields = ['page', 'sort', 'limit', 'fields'];
+        excludedFields.forEach(field => delete queryObj[field]);
 
+        // Prepare query
+        let queryStr = JSON.stringify(queryObj);
+        // Replace gte gt lte lt with the same word but with a $ in front
+        queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
+
+        
+        const query = Operation.find(JSON.parse(queryStr));
+
+
+        // Execute query
+        const operations = await query;
+
+        // Send response
         res.status(200).json({
             status: 'success',
             results: operations.length,
