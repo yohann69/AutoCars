@@ -40,6 +40,8 @@
 	-webkit-user-select: none;
 	user-select: none;
 	transition-duration: .1s;
+	-webkit-user-drag: none;
+	
 }
 
 html,
@@ -103,12 +105,23 @@ ul{
 #login,
 #logo {
 	width: 50%;
+	height: 100%;
 }
 
 #logo {
 	border-top-right-radius: var(--border-norm);
 	border-bottom-right-radius: var(--border-norm);
 	background-color: rgb(28, 115, 181);
+
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+.loginpage{
+	justify-content: center;
 }
 
 form {
