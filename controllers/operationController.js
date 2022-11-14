@@ -2,6 +2,14 @@ const { query } = require('express');
 const Operation = require('./../models/operationModel')
 
 
+exports.aliasCheapestOperation = (req, res, next) => {
+    req.query.limit = '1';
+    req.query.sort = 'price';
+
+    next();
+}
+
+
 exports.getAllOperations = async (req, res) => {
     try {
         const queryObj = { ...req.query }; // ... = destruturing query object
@@ -13,8 +21,40 @@ exports.getAllOperations = async (req, res) => {
         // Replace gte gt lte lt with the same word but with a $ in front
         queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
 
-        
-        const query = Operation.find(JSON.parse(queryStr));
+
+        let query = Operation.find(JSON.parse(queryStr));
+
+        // Sort results
+        if (req.query.sort) {
+            // Sort results by multiple fields (add ',' in request)
+            const sortBy = req.query.sort.split(',').join(' ');
+            query = query.sort(sortBy);
+        }
+
+
+        // Limit fields
+        if (req.query.fields) {
+            const fields = req.query.fields.split(',').join(' ');
+            query = query.select(fields);
+        } else {
+            query = query.select('-__v');  // - to remove the variable
+        }
+
+
+
+        // Pagination
+        const page = req.query.page * 1 || 1;
+        const limit = req.query.limit * 1 || 100;
+        const skip = (page - 1) * limit;
+
+        query = query.skip(skip).limit(limit);
+
+        if (req.query.page) {
+            const numOperations = await Operation.countDocuments();
+            if (skip >= numOperations) throw new Error('This page does not exist');
+        }
+
+
 
 
         // Execute query
