@@ -119,3 +119,44 @@ exports.deleteOperation = async (req, res) => {
     }
 }
 
+
+
+exports.getOperationStats = async (req, res) => {
+
+    try {
+        const stats = await Operation.aggregate([
+            {
+                $group: {
+                    _id: null, // Replace null with '$category' to group by category for example
+                    averagePrice: { $avg: '$price' },
+                    averageDuration: { $avg: '$duration' },
+                    minPrice: { $min: '$price' },
+                    maxPrice: { $max: '$price' },
+                    maxDuration: { $max: '$duration' },
+                    minDuration: { $min: '$duration' },
+                }
+            },
+            // {
+            //     $sort: {
+            //         averagePrice: 1
+            //     }
+            // },
+            // {
+            //     $match: { _id: { $ne: 'EASY'}} // ne => not equal 
+            // }
+        ]);
+        res.status(200).json({
+            status: 'success',
+            data: {
+                stats
+            }
+        })
+    } catch (err) {
+        res.status(400).json({
+            status: 'Failed',
+            message: 'Invalid data sent'
+        })
+    }
+}
+
+

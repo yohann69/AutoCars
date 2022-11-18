@@ -10,6 +10,14 @@ router
     .route('/cheapest-operation')
     .get(operationController.aliasCheapestOperation, operationController.getAllOperations)
 
+
+
+router
+    .route('/stats')
+    .get(operationController.getOperationStats);
+
+
+
 router
     .route('/')
     .get(operationController.getAllOperations)
