@@ -73,7 +73,7 @@ exports.createOperation = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             status: 'Failed',
-            message: 'Invalid data sent'
+            message: err
         })
     }
 }
@@ -95,7 +95,7 @@ exports.updateOperation = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             status: 'Failed',
-            message: 'Invalid data sent'
+            message: err
         })
     }
 
@@ -114,7 +114,7 @@ exports.deleteOperation = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             status: 'Failed',
-            message: 'Invalid data sent'
+            message: err
         })
     }
 }
@@ -154,7 +154,7 @@ exports.getOperationStats = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             status: 'Failed',
-            message: 'Invalid data sent'
+            message: err
         })
     }
 }
