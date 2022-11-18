@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose');
-const slugify = require('slugify')
+// const slugify = require('slugify');
+const validator = require('validator');
 
 const operationSchema = new mongoose.Schema({
 	name: {
@@ -9,7 +10,8 @@ const operationSchema = new mongoose.Schema({
 		unique: true,
 		trim: true,
 		maxlength: [50, 'Le nom ne peut pas dépasser 50 caractères'],
-		minlength: [3, 'Le nom doit contenir au moins 3 caractères']
+		minlength: [3, 'Le nom doit contenir au moins 3 caractères'],
+		// validate: [validator.isAlphanumeric, 'Le nom ne peut contenir que des lettres et chiffres']
 	},
 	// slug: { type: String, required: false }, // Useless to me but you know...
 	duration: {
@@ -31,7 +33,7 @@ const operationSchema = new mongoose.Schema({
 	// 		message: 'Le type doit être soit Réparation, Remplacement, Amélioration ou Autre'
 	// 	}
 	// },
-	
+
 	// secretOperation: {
 	// 	type: Boolean,
 	// 	default: false
