@@ -38,15 +38,17 @@ const operationSchema = new mongoose.Schema({
 	// 	type: Boolean,
 	// 	default: false
 	// }
-}, {
-	toJSON: { virtuals: true },
-	toObject: { virtuals: true }
-})
+}
+// , {
+// 	toJSON: { virtuals: true },
+// 	toObject: { virtuals: true }
+// }
+)
 
 
-operationSchema.virtual('durationWeeks').get(function () {
-	return this.duration / 7;
-})
+// operationSchema.virtual('durationWeeks').get(function () {
+// 	return this.duration / 7;
+// })
 
 // Document middleware that runs before .save() and .create()
 // operationSchema.pre('save', function (next) {
