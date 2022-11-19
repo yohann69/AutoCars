@@ -39,10 +39,10 @@ const operationSchema = new mongoose.Schema({
 	// 	default: false
 	// }
 }
-// , {
-// 	toJSON: { virtuals: true },
-// 	toObject: { virtuals: true }
-// }
+	// , {
+	// 	toJSON: { virtuals: true },
+	// 	toObject: { virtuals: true }
+	// }
 )
 
 

@@ -22,31 +22,31 @@ mongoose.connect(db, {
 
 const Operations = JSON.parse(fs.readFileSync(`${__dirname}/operations.json`, 'UTF-8'));
 
-const importDatabase = async () =>{
-    try {
-        await Operation.create(Operations);
-        console.log("Operation created");
-    } catch (e) {
-        console.error(e)
-    }
-    process.exit();
+const importDatabase = async () => {
+	try {
+		await Operation.create(Operations);
+		console.log("Operation created");
+	} catch (e) {
+		console.error(e)
+	}
+	process.exit();
 }
 
 
 
 const deleteData = async () => {
-    try {
-        await Operation.deleteMany();
-        console.log("Operation deleted");
-    } catch (e) {
-        console.error(e);
-    }
-    process.exit();
+	try {
+		await Operation.deleteMany();
+		console.log("Operation deleted");
+	} catch (e) {
+		console.error(e);
+	}
+	process.exit();
 }
 
 
 if (process.argv[2] === '--import') {
-    importDatabase();
+	importDatabase();
 } else if (process.argv[2] === '--delete') {
-    deleteData();
+	deleteData();
 }

@@ -7,28 +7,28 @@ const router = express.Router();
 
 
 router
-    .route('/cheapest-operation')
-    .get(operationController.aliasCheapestOperation, operationController.getAllOperations)
+	.route('/cheapest-operation')
+	.get(operationController.aliasCheapestOperation, operationController.getAllOperations)
 
 
 
 router
-    .route('/stats')
-    .get(operationController.getOperationStats);
+	.route('/stats')
+	.get(operationController.getOperationStats);
 
 
 
 router
-    .route('/')
-    .get(operationController.getAllOperations)
-    .post(operationController.createOperation);
+	.route('/')
+	.get(operationController.getAllOperations)
+	.post(operationController.createOperation);
 
 
 router
-    .route('/:id')
-    .get(operationController.getOperation)
-    .patch(operationController.updateOperation)
-    .delete(operationController.deleteOperation);
+	.route('/:id')
+	.get(operationController.getOperation)
+	.patch(operationController.updateOperation)
+	.delete(operationController.deleteOperation);
 
 
 module.exports = router;
