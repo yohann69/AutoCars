@@ -67,6 +67,10 @@ exports.updateOperation = catchAsync(async (req, res, next) => {
 		runValidators: true
 	});
 
+	if (!operation) {
+		return next(new AppError('Aucune opération avec cet ID', 404));
+	}
+
 	res.status(200).json({
 		status: 'success',
 		data: {
@@ -77,7 +81,11 @@ exports.updateOperation = catchAsync(async (req, res, next) => {
 })
 
 exports.deleteOperation = catchAsync(async (req, res, next) => {
-	await Operation.findByIdAndDelete(req.params.id);
+	const operation = await Operation.findByIdAndDelete(req.params.id);
+
+	if (!operation) {
+		return next(new AppError('Aucune opération avec cet ID', 404));
+	}
 
 	res.status(200).json({
 		status: 'success',
