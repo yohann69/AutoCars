@@ -1,5 +1,6 @@
 const express = require('express');
 const operationController = require('../controllers/operationController');
+const authController = require('../controllers/authController');
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ router
 
 router
 	.route('/')
-	.get(operationController.getAllOperations)
+	.get(authController.protect, operationController.getAllOperations) // if error on protect the next one isn't called
 	.post(operationController.createOperation);
 
 
