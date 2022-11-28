@@ -349,6 +349,6 @@ aside>div,
 	border-radius: var(--border-norm);
 }
 
-.interface form input[type="text"] {
+.interface form input[type="text"], .interface form input[type="email"] {
 	width: 300px;
 }
