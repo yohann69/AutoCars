@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const mongoose = require('mongoose');
 const validate = require('validator');
 const bcrypt = require('bcryptjs');
@@ -21,7 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        required: [true, "Veuillez spécifier un rôle"],
+        default: 'employee',
         enum: {
             values: ['admin', 'chief', 'employee'],
             message: 'Le rôle doit être soit admin, chief ou employee'
@@ -55,7 +56,18 @@ const userSchema = new mongoose.Schema({
             message: 'Les mots de passe ne correspondent pas'
         }
     },
-    photo: String
+    email: {
+        type: String,
+        required: [true, "Veuillez spécifier une adresse email"],
+        unique: true,
+        trim: true,
+        lowercase: true,
+        validate: [validate.isEmail, 'Veuillez spécifier une adresse email valide']
+    },
+    passwordChangedAt: Date,
+    photo: String,
+    passwordResetToken: String,
+    passwordResetExpires: Date
 });
 
 
@@ -72,8 +84,31 @@ userSchema.pre('save', async function (next) {
 });
 
 
-userSchema.methods.correctPassword = function (candidatePassword, userPassword){
+userSchema.methods.correctPassword = function (candidatePassword, userPassword) {
     return bcrypt.compare(candidatePassword, userPassword);
+}
+
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+    if (this.passwordChangedAt) {
+        const changedTimestamp = parseInt(this.passwordChangedAt.getTime() / 1000, 10);
+
+        return JWTTimestamp < changedTimestamp;
+    }
+
+    // False = Not changed
+    return false;
+}
+
+
+
+userSchema.methods.createPasswordResetToken = function () {
+    const resetToken = crypto.randomBytes(32).toString('hex');
+
+    this.passwordResetToken = crypto.createHash('sha257').update(resetToken).digest('hex');
+
+    this.passwordResetExpires = date.now() + 10 * 60 * 1000;
+
+    return resetToken;
 }
 
 

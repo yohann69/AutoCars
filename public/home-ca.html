@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Log In</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta lang="utf-8" content="text/html; charset=utf-8">
@@ -14,11 +14,48 @@
     <nav>
         <section class="nav-left">
             <img src="img/logo.png" alt="logo">
-            <a href="#">Accueil</a>
-            <a href="#">Clients & Véhicules</a>
-            <a href="#">Rendez-vous</a>
-            <a href="#">Factures</a>
-            <a href="#">Pièces</a>
+            <div>
+                <a href="#">Accueil</a>
+                <div class="dropdown-content"></div>
+            </div>
+
+            <div>
+                <a href="#">Rendez-vous</a>
+                <div class="dropdown-content">
+                    <a href="creer-rdv.html">Créer un rendez-vous</a>
+                    <a href="liste-rdv.html">Gestion des rendez-vous</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="#">Clients & Véhicules</a>
+                <div class="dropdown-content">
+                    <a href="gestion-clients.html">Gestion des clients</a>
+                    <a href="creer-client.html">Créer un client</a>
+                    <a href="gestion-vehicules.html">Gestion des véhicules</a>
+                </div>
+            </div>
+
+
+            <div>
+                <a href="#">Factures</a>
+                <div class="dropdown-content">
+                    <a href="creer-rdv.html">Créer une facture</a>
+                    <a href="gestion-factures.html">Gestion des factures</a>
+                </div>
+            </div>
+
+
+            <div>
+                <a href="#">Pièces</a>
+                <div class="dropdown-content">
+                    <a href="consulter-pieces.html">Consulter le stock des pièces</a>
+                    <a href="commander-pieces.html">Commander des pièces</a>
+                </div>
+            </div>
+
+
+
         </section>
         <section class="nav-right">
             <img src="img/logout.png" alt="Déconnexion" class="logout">
@@ -71,21 +108,21 @@
 
     <section class="popupmenu client-full hidden">
         <main class="menu">
-            <a href="#">
+            <a href="gestion-clients.html">
                 <article class="btn-menu listclient">
                     <img src="img/client.png" alt="Liste des clients">
                     <h3>Gestion des clients</h3>
                 </article>
             </a>
 
-            <a href="#">
+            <a href="creer-client.html">
                 <article class="btn-menu createclient">
                     <img src="img/createClient.png" alt="Création client">
                     <h3>Créer un client</h3>
                 </article>
             </a>
 
-            <a href="#">
+            <a href="gestion-vehicules.html">
                 <article class="btn-menu managevehicles">
                     <img src="img/car.png" alt="Création client">
                     <h3>Gestion des véhicules</h3>
@@ -97,14 +134,14 @@
 
     <section class="popupmenu facture-full hidden">
         <main class="menu">
-            <a href="#">
+            <a href="creer-rdv.html">
                 <article class="btn-menu client">
                     <img src="img/createFacture.png" alt="Créer facture">
-                    <h3>Créer une facture</h3>
+                    <h3>Créer un devis</h3>
                 </article>
             </a>
 
-            <a href="#">
+            <a href="gestion-factures.html">
                 <article class="btn-menu facture">
                     <img src="img/factures.png" alt="Liste factures">
                     <h3>Consulter les factures</h3>

@@ -15,11 +15,48 @@
     <nav>
         <section class="nav-left">
             <img src="img/logo.png" alt="logo">
-            <a href="home-ca.html">Accueil</a>
-            <a href="#">Clients & Véhicules</a>
-            <a href="#">Rendez-vous</a>
-            <a href="#">Factures</a>
-            <a href="#">Pièces</a>
+            <div>
+                <a href="#">Accueil</a>
+                <div class="dropdown-content"></div>
+            </div>
+
+            <div>
+                <a href="#">Rendez-vous</a>
+                <div class="dropdown-content">
+                    <a href="creer-rdv.html">Créer un rendez-vous</a>
+                    <a href="liste-rdv.html">Gestion des rendez-vous</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="#">Clients & Véhicules</a>
+                <div class="dropdown-content">
+                    <a href="gestion-clients.html">Gestion des clients</a>
+                    <a href="creer-client.html">Créer un client</a>
+                    <a href="gestion-vehicules.html">Gestion des véhicules</a>
+                </div>
+            </div>
+
+
+            <div>
+                <a href="#">Factures</a>
+                <div class="dropdown-content">
+                    <a href="creer-rdv.html">Créer une facture</a>
+                    <a href="gestion-factures.html">Gestion des factures</a>
+                </div>
+            </div>
+
+
+            <div>
+                <a href="#">Pièces</a>
+                <div class="dropdown-content">
+                    <a href="consulter-pieces.html">Consulter le stock des pièces</a>
+                    <a href="commander-pieces.html">Commander des pièces</a>
+                </div>
+            </div>
+
+
+
         </section>
         <section class="nav-right">
             <img src="img/logout.png" alt="Déconnexion" class="logout">
@@ -147,7 +184,7 @@
                 </section>
                 <div class="btn">
                     <input type="reset" value="Réinitialiser">
-                    <input type="submit" value="Créer l'utilisateur">
+                    <input type="submit" value="Créer le devis">
                 </div>
             </form>
         </section>

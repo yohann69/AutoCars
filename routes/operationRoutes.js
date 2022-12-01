@@ -29,7 +29,7 @@ router
 	.route('/:id')
 	.get(operationController.getOperation)
 	.patch(operationController.updateOperation)
-	.delete(operationController.deleteOperation);
+	.delete(authController.protect, authController.restrictTo('admin'), operationController.deleteOperation);
 
 
 module.exports = router;
