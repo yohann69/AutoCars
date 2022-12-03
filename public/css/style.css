@@ -222,21 +222,8 @@ nav img {
 	margin: 0 30px;
 }
 
-/* .nav-left>div>a:hover:after {
-	background-color: #141414;
-	height: 2px;
-	width: 100px;
-	margin-top: 5px;
-	content: "";
-	display: block;
-	position: absolute;
-	margin-left: 50px;
-	padding-top: 20px;
-} */
 
-.nav-left>div>a{
-	/* padding-top: 20px; */
-}
+
 
 .nav-left>div {
 	width: 200px;
