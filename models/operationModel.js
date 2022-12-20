@@ -24,7 +24,7 @@ const operationSchema = new mongoose.Schema({
 		required: [true, "Veuillez spécifier un prix pour l'opération"],
 		min: [10, 'Le prix doit être supérieur à 10€'],
 		//select: false
-	},
+	}
 	// type: {
 	// 	type: String,
 	// 	required: [true, "Veuillez spécifier un type d'opération"],

@@ -1,0 +1,378 @@
+[
+	{
+		"modelName": "Q3",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q5",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q7",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q8",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A1",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A2",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A3",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A4",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A5",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A6",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A7",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A8",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q3",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q5",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q7",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "Q8",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A1",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A2",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A3",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A4",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A5",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "A6",
+		"brand": "Audi"
+	},
+	{
+		"modelName": "1-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "2-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "3-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "4-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "5-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "6-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "7-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "8-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X1",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X2",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X3",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X4",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X5",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X6",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "X7",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "Z4",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "1-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "2-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "3-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "4-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "5-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "6-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "7-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "8-Série",
+		"brand": "BMW"
+	},
+	{
+		"modelName": "124 Spider",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500L",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500X",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "Tipo",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "124 Spider",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500L",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "500X",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "Tipo",
+		"brand": "Fiat"
+	},
+	{
+		"modelName": "C-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "E-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "S-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "SLC",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "AMG GT",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "GLC",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "GLE",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "GLS",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "C-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "E-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "S-Class",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "SLC",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "AMG GT",
+		"brand": "Mercedes-Benz"
+	},
+	{
+		"modelName": "B-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "C-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Fiesta",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Focus",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Grand C-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Kuga",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Mondeo",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "S-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Tourneo Custom",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "B-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "C-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Fiesta",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Focus",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Grand C-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Kuga",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Mondeo",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "S-Max",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Tourneo Custom",
+		"brand": "Ford"
+	},
+	{
+		"modelName": "Civic",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "CR-V",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "HR-V",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "Jazz",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "NSX",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "Civic",
+		"brand": "Honda"
+	},
+	{
+		"modelName": "CR-V",
+		"
+	}
+]
