@@ -15,7 +15,7 @@ const signToken = id => {
 
 const createSendToken = (user, statusCode, res) => {
 	const token = signToken(user._id);
-	
+
 	const cookieOptions = {
 		expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
 		httpOnly: true // prefent the cookie from being edited by the browser
@@ -129,6 +129,7 @@ exports.restrictTo = (...roles) => {
 	};
 };
 
+
 exports.forgotPassword = catchAsync(async (req, res, next) => {
 	// 1) Get user based on POSTed email
 	const user = await User.findOne({ email: req.body.email });
@@ -141,14 +142,10 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 	await user.save({ validateBeforeSave: false });
 
 	// 3) Send it to user's email
-	const resetURL = `${req.protocol}://${req.get(
-		'host'
-	)}/api/v1/users/resetPassword/${resetToken}`;
+	const resetURL = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${resetToken}`;
 
 	const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!`;
-	console.log(resetToken);
-	console.log(resetURL);
-	console.log(message);
+
 	try {
 		await sendEmail({
 			email: user.email,
@@ -176,12 +173,12 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 	// 1) Get user based on the token
 	const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
 
-	const user = await User.findOne({passwordResetToken: hashedToken, passwordResetExpires: {$gt: Date.now()}});
+	const user = await User.findOne({ passwordResetToken: hashedToken, passwordResetExpires: { $gt: Date.now() } });
 
-	
+
 	// 2) If token has not expired, and there is user, set the new password
 	if (!user) {
-		return next (new AppError('Token is invalid or has expired', 400));
+		return next(new AppError('Token is invalid or has expired', 400));
 	}
 
 	user.password = req.body.password;

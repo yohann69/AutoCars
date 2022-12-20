@@ -1,0 +1,30 @@
+[
+	{
+		"client": "63a1ca92c03b862e10be3359",
+		"numModel": "63a1ca91c03b862e10be32c8",
+		"serialNumber": "047242189726398651",
+		"matriculation": "AB-123-CD",
+		"drivingYear": 2015
+	},
+	{
+		"client": "63a1ca92c03b862e10be335b",
+		"numModel": "63a1ca91c03b862e10be32ce",
+		"serialNumber": "209857397983750928",
+		"matriculation": "GE-947-VH",
+		"drivingYear": 2020
+	},
+	{
+		"client": "63a1ca92c03b862e10be335b",
+		"numModel": "63a1ca91c03b862e10be32bf",
+		"serialNumber": "972049709726247958",
+		"matriculation": "KL-209-OP",
+		"drivingYear": 2021
+	},
+	{
+		"client": "63a1ca92c03b862e10be3358",
+		"numModel": "63a1ca91c03b862e10be32e7",
+		"serialNumber": "094069048370987395",
+		"matriculation": "JA-007-ME",
+		"drivingYear": 1998
+	}
+]

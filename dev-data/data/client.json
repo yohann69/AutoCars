@@ -1,0 +1,38 @@
+[
+	{
+		"fname": "John",
+		"lname": "Doe",
+		"phone": "0612345678",
+		"email": "john.doe@mail.com",
+		"address": "5 Rue des marroniers",
+		"city": "Valence",
+		"postalCode": "26000"
+	},
+	{
+		"fname": "Jane",
+		"lname": "Doe",
+		"phone": "0623456789",
+		"email": "jane.doe@mail.com",
+		"address": "5 Rue des marroniers",
+		"city": "Valence",
+		"postalCode": "26000"
+	},
+	{
+		"fname": "Jean",
+		"lname": "Dupont",
+		"phone": "0634567890",
+		"email": "jean.dupont@mail.com",
+		"address": "10 rue du peuplier",
+		"city": "Valence",
+		"postalCode": "26000"
+	},
+	{
+		"fname": "Jeanne",
+		"lname": "Muller",
+		"phone": "0645678901",
+		"email": "jeanne.dupont@mail.com",
+		"address": "2B avenue de la république",
+		"city": "Valence",
+		"postalCode": "26000"
+	}
+]

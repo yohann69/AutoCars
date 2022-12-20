@@ -10,6 +10,8 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const operationRouter = require('./routes/operationRoutes');
 const userRouter = require('./routes/userRoutes');
+const vehicleRouter = require('./routes/vehicleRoutes');
+const clientRouter = require('./routes/clientRoutes');
 
 const app = express();
 
@@ -70,6 +72,8 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/operations', operationRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/vehicles', vehicleRouter);
+app.use('/api/v1/clients', clientRouter);
 
 
 app.all('*', (req, res, next) => {

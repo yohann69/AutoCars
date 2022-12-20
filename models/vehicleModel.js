@@ -2,9 +2,11 @@
 const mongoose = require('mongoose');
 // const slugify = require('slugify');
 const validator = require('validator');
+// const Client = require('./clientModel');
+
 
 const vehicleSchema = new mongoose.Schema({
-	clientCode: {
+	client: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'Client',
 		required: [true, 'Un véhicule doit appartenir à un client.']
@@ -18,8 +20,9 @@ const vehicleSchema = new mongoose.Schema({
 		type: String,
 		validator: validator.isAlphanumeric,
 		required: [true, 'Un véhicule doit avoir un numéro de série.'],
+		unique: true,
 	},
-	matriculation : {
+	matriculation: {
 		type: String,
 		validator: validator.isAlphanumeric,
 		required: [true, 'Un véhicule doit avoir une immatriculation.'],
@@ -43,6 +46,16 @@ vehicleSchema.pre(/^find/, function (next) {
 	next();
 })
 
+
+vehicleSchema.pre(/^find/, function (next) {
+	this.populate({
+		path: 'client',
+		select: '-__v -passwordChangedAt -passwordResetToken -passwordResetExpires'
+	})
+	next();
+})
+
+
 vehicleSchema.post(/^find/, function (docs, next) {
 	console.log(`Query took ${Date.now() - this.start} milliseconds!`)
 	next();
@@ -51,6 +64,5 @@ vehicleSchema.post(/^find/, function (docs, next) {
 
 
 const Vehicle = mongoose.model('Vehicle', vehicleSchema);
-
 
 module.exports = Vehicle;
