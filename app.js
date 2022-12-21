@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -13,10 +14,13 @@ const userRouter = require('./routes/userRoutes');
 const vehicleRouter = require('./routes/vehicleRoutes');
 const clientRouter = require('./routes/clientRoutes');
 
-const app = express();
+const app = express(); // Create express app
+
+app.set('view engine', 'pug'); // Set view engine
+app.set('views', `${__dirname}/views`); // Set views folder
 
 // Set security HTTP headers
-app.use(helmet());
+app.use(helmet()); 
 
 // Development login
 if (process.env.NODE_ENV === 'development') {
@@ -67,6 +71,16 @@ app.use(express.static(`${__dirname}/public`))
 app.use((req, res, next) => {
 	req.requestTime = new Date().toISOString();
 	next();
+})
+
+
+
+
+// Routes
+app.get('/', (req, res) => {
+	res.status(200).render('base', {
+		title: 'AutoCars - Accueil'
+	})
 })
 
 
