@@ -1,0 +1,75 @@
+extends base
+
+block content
+    main.menu 
+        article.btn-menu.rdv
+            img(src="img/rdv.png", alt="Rendez-vous")
+            h3 Rendez-vous
+        article.btn-menu.client
+            img(src="img/client.png", alt="Client")
+            h3 Clients et Véhicules
+        article.btn-menu.facture
+            img(src="img/factures.png", alt="Factures")
+            h3 Factures
+        article.btn-menu.piece
+            img(src="img/pieces.png", alt="Pièces")
+            h3 Pièces
+
+    section.popupmenu.rdv-full.hidden
+        main.menu
+            a(href="creer-rdv.php")
+                article.btn-menu.newrdv
+                    img(src="img/createRdv.png", alt="Nouveau rendez-vous")
+                    h3 Créer un rendez-vous
+            a(href="liste-rdv.php")
+                article.btn-menu.listrdv
+                    img(src="img/searchRdv.png", alt="Liste rendez-vous")
+                    h3 Consulter les rendez-vous
+        button.back ✖
+
+    section.popupmenu.client-full.hidden
+        main.menu
+            a(href="gestion-clients.php")
+                article.btn-menu.listclient
+                    img(src="img/client.png", alt="Liste des clients")
+                    h3 Gestion des clients
+            a(href="creer-client.php")
+                article.btn-menu.createclient
+                    img(src="img/createClient.png", alt="Création client")
+                    h3 Créer un client
+            a(href="gestion-vehicules.php")
+                article.btn-menu.managevehicles
+                    img(src="img/car.png", alt="Création client")
+                    h3 Gestion des véhicules
+        button.back ✖
+
+    section.popupmenu.facture-full.hidden
+        main.menu
+            a(href="creer-rdv.php")
+                article.btn-menu.client
+                    img(src="img/createFacture.png", alt="Créer facture")
+                    h3 Créer un devis
+            a(href="gestion-factures.php")
+                article.btn-menu.facture
+                    img(src="img/factures.png", alt="Liste factures")
+                    h3 Consulter les factures
+        button.back ✖
+
+
+
+
+    section.popupmenu.pieces-full.hidden
+        main.menu
+            a(href="creer-piece.php")
+                article.btn-menu.client
+                    img(src="img/pieces.png", alt="Liste Pièces")
+                    h3 Consulter le stock des pièces
+            a(href="liste-pieces.php")
+                article.btn-menu.facture
+                    img(src="img/buyPieces.png", alt="Factures")
+                    h3 Commander des pièces
+        button.back ✖
+
+
+
+    script(src="js/accueilChef.js")

@@ -1,0 +1,50 @@
+Rights:
+
+Admin
+-----------------------------------------------------------
+Créer un compte
+Supprimer un compte
+Modifier un compte
+
+Créer une opération
+Gerer les opérations
+Supprimer les opérations
+
+Consulter les statistiques
+Consulter les clients
+Consulter les véhicules
+Consulter les rendez-vous
+
+
+Chef d'atelier
+-----------------------------------------------------------
+Créer un client
+Supprimer un client
+Modifier un client
+
+Créer un véhicule
+Supprimer un véhicule
+Modifier un véhicule
+
+Créer un rendez-vous
+Supprimer un rendez-vous
+Modifier un rendez-vous
+
+Créer un devis
+Supprimer un devis
+Modifier un devis
+
+Générer une facture
+
+
+Technicien
+-----------------------------------------------------------
+Consulter les clients
+Consulter les véhicules
+Consulter les rendez-vous
+Consulter les devis
+
+Modifier un devis
+Modifier un rendez-vous
+
+

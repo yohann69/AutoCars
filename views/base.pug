@@ -1,19 +1,12 @@
 html 
 	head 
-		title AutoCars
+		title AutoCars | #{title}
 		link(rel='stylesheet', href='/css/style.css')
 		link(rel='shortcut icon', href='/img/favicon.ico')
 
 	body 
-		//- Get the value from the route defined | we can also execure js code here directly
-		h1= title.toUpperCase() 
+		include _navbar
 		
-		//- We can also define variables here
-		- const x = 10 
-		- const y = 20
-		- const z = x + y
-		p= z
-
-		//- We can also use interpolation here
-		p Welcome to #{title} 
+		block content
+			h1 placeholder
 		

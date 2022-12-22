@@ -1,0 +1,25 @@
+html 
+	head 
+		title AutoCars | #{title}
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='shortcut icon', href='/img/favicon.ico')
+
+	body.loginpage
+		main.login 
+			section#login
+				form
+					h1 Connexion
+					section
+						section.credentials
+							label ID d'employé
+							input(type='text', name='username', placeholder='DufourT')
+						section.credentials
+							label Mot de passe
+							input(type='password', name='password', placeholder='********')
+					section.login-btn
+						input(type='submit', value='Se connecter')
+
+			section#logo
+				img(src='img/logo.png', alt='logo')
+				h2 Auto Cars
+				

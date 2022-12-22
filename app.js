@@ -13,6 +13,8 @@ const operationRouter = require('./routes/operationRoutes');
 const userRouter = require('./routes/userRoutes');
 const vehicleRouter = require('./routes/vehicleRoutes');
 const clientRouter = require('./routes/clientRoutes');
+const viewRouter = require('./routes/viewRoutes');
+
 
 const app = express(); // Create express app
 
@@ -20,7 +22,7 @@ app.set('view engine', 'pug'); // Set view engine
 app.set('views', `${__dirname}/views`); // Set views folder
 
 // Set security HTTP headers
-app.use(helmet()); 
+app.use(helmet());
 
 // Development login
 if (process.env.NODE_ENV === 'development') {
@@ -77,13 +79,8 @@ app.use((req, res, next) => {
 
 
 // Routes
-app.get('/', (req, res) => {
-	res.status(200).render('base', {
-		title: 'AutoCars - Accueil'
-	})
-})
 
-
+app.use('/', viewRouter);
 app.use('/api/v1/operations', operationRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/vehicles', vehicleRouter);
