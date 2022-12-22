@@ -1,0 +1,22 @@
+nav 
+    section.nav-left 
+        a(href='/').nav-logo
+            img(src='/img/logo.png', alt='logo')
+        div 
+            a(href='/admin/accueil') Accueil
+            div.dropdown-content
+        div
+            a(href='#') Utilisateurs
+            div.dropdown-content
+                a(href='/admin/creerUtilisateur') Créer un utilisateur
+                a(href='/admin/gererUtilisateur') Gestion des utilisateurs
+        div
+            a(href='/admin') Statistiques
+            div.dropdown-content
+        div
+            a(href='#') Opérations
+            div.dropdown-content
+                a(href='/admin/crerrOperation') Créer une opération
+                a(href='/admin/gererOperation') Gérer les opérations
+    section.nav-right
+        img(src='/img/logout.png', alt='Déconnexion', class='logout')
