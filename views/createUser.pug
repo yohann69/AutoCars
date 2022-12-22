@@ -12,25 +12,29 @@ block content
                         input(type="text", class="fname", placeholder="François", required)
                         label(for="fname") Nom
                         input(type="text", class="lname", placeholder="Duchemin", required)
+                        label(for="username") Nom d'utilisateur
+                        input(type="text", class="username", placeholder="fduchemin", required)
                     .role
                         h3 Rôle
                         div
-                            input(type="radio", name="role", id="Administrateur", value="Administrateur", required)
+                            input(type="radio", name="role", id="Administrateur", class="role", value="Administrateur", required)
                             label(for="Administrateur") Administrateur
                             br
                         div
-                            input(type="radio", name="role", id="Chef d'atelier", value="Chef d'atelier", required)
+                            input(type="radio", name="role", id="Chef d'atelier", class="role", value="Chef d'atelier", required)
                             label(for="Chef d'atelier") Chef d'atelier
                             br
                         div
-                            input(type="radio", name="role", id="Employé", value="Employé", required)
+                            input(type="radio", name="role", id="Employé", class="role", value="Employé", required)
                             label(for="Employé") Employé
                     .credentials
                         h3 Identifiants
-                        label(for="username") Nom d'utilisateur
-                        input(type="text", class="username", placeholder="fduchemin", required)
+                        label(for="email") Adresse courriel
+                        input(type="email", class="email", placeholder="dumont@autocars.eu.org")
                         label(for="password") Mot de passe
                         input(type="text", class="password", placeholder="**************", required)
+                        label(for="password") Confirmation
+                        input(type="text", class="passwordConfirm", placeholder="**************", required)
 
                 .btn
                     input(type="reset", value="Réinitialiser")

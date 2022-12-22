@@ -51,3 +51,13 @@ exports.getCreateUser = (req, res) => {
         title: 'Créer un utilisateur'
     })
 }
+
+
+/*=============================================
+    =            404            =
+=============================================*/
+exports.get404 = (req, res) => {
+    res.status(404).render('error', {
+        title: 'Page introuvable'
+    })
+}

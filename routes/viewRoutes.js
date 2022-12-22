@@ -27,7 +27,7 @@ router.get('/accueilEmployee', authController.protect, authController.restrictTo
 
 
 
-
+// router.get('/*', viewController.get404)
 
 
 

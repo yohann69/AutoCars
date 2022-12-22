@@ -396,3 +396,7 @@ aside>div,
 h1{
 	font-size: 200%;
 }
+
+input[type="radio"]{
+	width: 50px;
+}

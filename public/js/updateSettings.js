@@ -1,4 +1,6 @@
 import axios from "axios"
+import { showAlert } from './alert';
+
 
 export const updateSettings = async (fname, lname, email) => {
     try {
@@ -12,12 +14,12 @@ export const updateSettings = async (fname, lname, email) => {
             }
         })
         if (res.data.status === 'success') {
-            alert('Informations mises à jour avec succès!')
+            showAlert('Informations mises à jour avec succès!')
             window.setTimeout(() => {
                 location.assign('/monCompte')
             }, 1500)
         }
     } catch (err) {
-        alert(err.response.data.message)
+        showAlert(err.response.data.message)
     }
 }
