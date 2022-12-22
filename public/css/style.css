@@ -151,6 +151,12 @@ form {
 	border-bottom-left-radius: var(--border-norm);
 }
 
+#login input[type=email], #login input[type=password] {
+	width: 225px;
+}
+
+
+
 input,
 select {
 	background-color: #5b5b5b7a;
