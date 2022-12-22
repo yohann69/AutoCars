@@ -15,9 +15,15 @@ export const login = async (email, password) => {
 
 
         if (res.data.status === 'success') {
-            console.log("logged in successfully");
-            location.assign('/');
-            
+            if(res.data.role === 'admin') {
+                location.assign('/accueilAdmin');
+            }
+            if(res.data.role === 'chief') {
+                location.assign('/accueilChef');
+            }
+            if(res.data.role === 'employee') {
+                location.assign('/accueilEmploye');
+            }
         }
     }
     catch (err) {

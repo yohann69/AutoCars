@@ -20,9 +20,9 @@ exports.getAccueilEmployee = (req, res) => {
 
 
 
-exports.getAccueil =  (req, res) => {
-	res.status(200).render('base', {
-		title: 'Accueil'
+exports.getPresentation =  (req, res) => {
+	res.status(200).render('prez', {
+		title: 'Présentation'
 	})
 }
 
@@ -36,5 +36,18 @@ exports.getLoginForm = (req, res) => {
 exports.getAccount = (req, res) => {
     res.status(200).render('account', {
         title: 'Mon compte'
+    })
+}
+
+
+
+
+
+/*=============================================
+    =            Administrator            =
+=============================================*/
+exports.getCreateUser = (req, res) => {
+    res.status(200).render('createUser', {
+        title: 'Créer un utilisateur'
     })
 }

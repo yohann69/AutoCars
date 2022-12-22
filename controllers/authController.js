@@ -31,6 +31,7 @@ const createSendToken = (user, statusCode, res) => {
 	res.status(statusCode).json({
 		status: 'success',
 		token,
+		role: user.role,
 		data: {
 			user
 		}
@@ -69,6 +70,7 @@ exports.login = catchAsync(async (req, res, next) => {
 	if (!user || !(await user.correctPassword(password, user.password))) {
 		return next(new AppError('Email ou mot de passe incorrect.', 401));
 	}
+
 
 	// 3) If everything ok, send token to client
 	createSendToken(user, 200, res);
@@ -160,7 +162,7 @@ exports.isLoggedIn = async (req, res, next) => {
 
 exports.restrictTo = (...roles) => {
 	return (req, res, next) => {
-		// roles ['admin', 'lead-guide']. role='user'
+		// roles ['admin', 'chief', 'employee']. role='user'
 		if (!roles.includes(req.user.role)) {
 			return next(
 				new AppError('Vous n\'avez pas le droit d\'effectuer cette action !', 403)

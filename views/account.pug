@@ -4,29 +4,29 @@ block content
     main.interface 
         h2 Mon compte
         section 
-            form.myaccount
+            form.myAccount
                 section 
                     .personalData 
                         h3 Informations personnelles
                         label(for="fname") Prénom
-                        input(type="text" class="fname" placeholder="François" value=`${user.fname}` required)
+                        input(type="text" class="fname" id='fname' placeholder="François" value=`${user.fname}` required)
                         label(for="fname") Nom
-                        input(type="text" class="lname" placeholder="Duchemin" value=`${user.lname}` required)
+                        input(type="text" class="lname" id='lname' placeholder="Duchemin" value=`${user.lname}` required)
                         label(for="email") Adresse e-mail
-                        input(type="email" class="email" placeholder="username@autocars.eu.org" value=`${user.email}` required)
+                        input(type="email" class="email" id='email' placeholder="username@autocars.eu.org" value=`${user.email}` required)
 
 
                     .passwordUpdate
                         h3 Mot de passe
                         label(for="password") Ancien Mot de passe
-                        input(type="password" class="password" placeholder="********" required)
+                        input(type="password" class="password" placeholder="********")
                         label(for="password") Nouveau Mot de passe
-                        input(type="password" class="password" placeholder="********" required)
+                        input(type="password" class="password" placeholder="********")
                         label(for="password") Confirmer le mot de passe
-                        input(type="password" class="password" placeholder="********" required)
+                        input(type="password" class="password" placeholder="********")
 
                         
                 .btn
                     input(type="reset" value="Réinitialiser")
-                    input(type="submit" value="Créer l'utilisateur")
+                    input(type="submit" value="Enregistrer les modifications")
                     
