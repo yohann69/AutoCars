@@ -389,3 +389,10 @@ aside>div,
 .interface form input[type="email"] {
 	width: 300px;
 }
+
+.error{
+	text-align: center;
+}
+h1{
+	font-size: 200%;
+}

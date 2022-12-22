@@ -5,16 +5,19 @@ html
 		link(rel='shortcut icon', href='/img/favicon.ico')
 
 	body 
-		//- - if (user.role === 'admin')
-		//- 	include _navbarAdmin
-		//- - else if (user.role === 'chief')
-		//- 	include _navbarChief
-		//- - else if (user.role === 'employee')
-		//- 	include _navbarEmployee
-		include _navbar
+		case user.role 
+			when 'admin' 
+				include _navbarAdmin
+			when 'chief'
+				include _navbarChief
+			when 'employee' 
+				include _navbarEmployee
 
+
+			
 		block content
 			h1 placeholder
+
 		
 
 	script(src='js/bundle.js')
