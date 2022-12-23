@@ -68,6 +68,6 @@ export const logout = async () => {
         }
 
     } catch (err) {
-        showAlert(err.response.data.message);
+        showAlert('error', err.response.data.message);
     }
 }
