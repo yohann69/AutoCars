@@ -32,6 +32,7 @@ const createSendToken = (user, statusCode, res) => {
 		status: 'success',
 		token,
 		role: user.role,
+		fname: user.fname,
 		data: {
 			user
 		}

@@ -3,6 +3,11 @@ import { showAlert } from './alert';
 
 
 export const login = async (email, password) => {
+
+    let logo = document.querySelector('#logo');
+    let info = document.querySelector('#logo section');
+
+    info.innerHTML = '<div class="spinner"></div>'
     try {
         const res = await axios({
             method: 'post',
@@ -13,21 +18,37 @@ export const login = async (email, password) => {
             }
         })
 
-
         if (res.data.status === 'success') {
-            if(res.data.role === 'admin') {
-                location.assign('/accueilAdmin');
+
+            logo.style.backgroundColor = 'green';
+            info.innerHTML = `<p style="margin:0 ">Bienvenue ${res.data.fname}</p>`;
+
+
+
+            if (res.data.role === 'admin') {
+                window.setTimeout(() => {
+                    location.assign('/accueilAdmin');
+                }, 1500);
+                // location.assign('/accueilAdmin');
             }
-            if(res.data.role === 'chief') {
-                location.assign('/accueilChef');
+            if (res.data.role === 'chief') {
+                window.setTimeout(() => {
+                    location.assign('/accueilChef');
+                }, 1500);
+                // location.assign('/accueilChef');
             }
-            if(res.data.role === 'employee') {
-                location.assign('/accueilEmploye');
+            if (res.data.role === 'employee') {
+                window.setTimeout(() => {
+                    location.assign('/accueilEmployee');
+                }, 1500);
+                // location.assign('/accueilEmployee');
             }
         }
     }
     catch (err) {
-        alert(err.response.data.message);
+        logo.style.backgroundColor = '#b80000';
+        info.innerHTML = `<p style="margin:0 ">${err.response.data.message}</p>`;
+        // showAlert('error', err.response.data.message);
     }
 }
 
@@ -46,7 +67,7 @@ export const logout = async () => {
             location.assign('/connexion');
         }
 
-    }catch (err) {
+    } catch (err) {
         showAlert(err.response.data.message);
     }
 }

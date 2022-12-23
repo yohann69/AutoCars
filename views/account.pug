@@ -1,32 +1,34 @@
 extends base
 
 block content 
-    main.interface 
-        h2 Mon compte
-        section 
-            form.myAccount
-                section 
-                    .personalData 
-                        h3 Informations personnelles
-                        label(for="fname") Prénom
-                        input(type="text" class="fname" id='fname' placeholder="François" value=`${user.fname}` required)
-                        label(for="fname") Nom
-                        input(type="text" class="lname" id='lname' placeholder="Duchemin" value=`${user.lname}` required)
-                        label(for="email") Adresse e-mail
-                        input(type="email" class="email" id='email' placeholder="username@autocars.eu.org" value=`${user.email}` required)
+	main.interface 
+		h2 Mon compte
+		section.myAccount
+			form.myAccountData
+				section 
+					.personalData 
+						h3 Informations personnelles
+						label(for="fname") Prénom
+						input(type="text" class="fname" id='fname' placeholder="François" value=`${user.fname}` required)
+						label(for="fname") Nom
+						input(type="text" class="lname" id='lname' placeholder="Duchemin" value=`${user.lname}` required)
+						label(for="email") Adresse e-mail
+						input(type="email" class="email" id='email' placeholder="username@autocars.eu.org" value=`${user.email}` required)
+						.btn
+							input(type="submit" value="Enregistrer les modifications")
+						
+			form.myAccountPassword
+				section 
+					.passwordUpdate
+						h3 Mot de passe
+						label(for="password") Ancien Mot de passe
+						input(type="password" class="password password-current" placeholder="********")
+						label(for="password") Nouveau Mot de passe
+						input(type="password" class="password password-new" placeholder="********")
+						label(for="password") Confirmer le mot de passe
+						input(type="password" class="password password-confirm" placeholder="********")
+						.btn
+							input(type="submit" class="btnUpdatePassword" value="Enregistrer les modifications")
 
-
-                    .passwordUpdate
-                        h3 Mot de passe
-                        label(for="password") Ancien Mot de passe
-                        input(type="password" class="password" placeholder="********")
-                        label(for="password") Nouveau Mot de passe
-                        input(type="password" class="password" placeholder="********")
-                        label(for="password") Confirmer le mot de passe
-                        input(type="password" class="password" placeholder="********")
-
-                        
-                .btn
-                    input(type="reset" value="Réinitialiser")
-                    input(type="submit" value="Enregistrer les modifications")
-                    
+						
+					
