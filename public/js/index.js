@@ -40,7 +40,6 @@ if (userDataForm) {
         const fname = document.querySelector('#fname').value;
         const lname = document.querySelector('#lname').value;
         const email = document.querySelector('#email').value;
-        console.log({fname, lname, email})
         updateSettings({fname, lname, email}, 'data');
     })
 }
@@ -55,7 +54,6 @@ if(userPassForm) {
         const password = document.querySelector('.password-new').value;
         const passwordConfirm = document.querySelector('.password-confirm').value;
         
-        console.log({passwordCurrent, password, passwordConfirm})
         await updateSettings({passwordCurrent, password, passwordConfirm}, 'password');
         
         

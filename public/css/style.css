@@ -425,3 +425,7 @@ input[type="radio"]{
 	   transform: rotate(1turn);
 	}
  }
+
+ .btn-menu h3 {
+    text-align: center;
+}

@@ -11950,30 +11950,29 @@ var logout = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          console.log("logout");
-          _context2.prev = 1;
-          _context2.next = 4;
+          _context2.prev = 0;
+          _context2.next = 3;
           return (0, _axios.default)({
             method: 'get',
             url: '/api/v1/users/logout'
           });
-        case 4:
+        case 3:
           res = _context2.sent;
           if (res.data.status === 'success') {
             // redirect to the login page
             location.assign('/connexion');
           }
-          _context2.next = 11;
+          _context2.next = 10;
           break;
-        case 8:
-          _context2.prev = 8;
-          _context2.t0 = _context2["catch"](1);
+        case 7:
+          _context2.prev = 7;
+          _context2.t0 = _context2["catch"](0);
           (0, _alert.showAlert)(_context2.t0.response.data.message);
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 8]]);
+    }, _callee2, null, [[0, 7]]);
   }));
   return function logout() {
     return _ref2.apply(this, arguments);
@@ -12067,8 +12066,7 @@ var updateSettings = /*#__PURE__*/function () {
               method: 'PATCH',
               url: url,
               data: data
-            });
-            console.log(res.data.status);
+            }); // console.log(res.data.status)
             if (res.data.status === 'success') {
               (0, _alert.showAlert)('Informations mises à jour avec succès!');
               window.setTimeout(function () {
@@ -12259,11 +12257,6 @@ if (userDataForm) {
     var fname = document.querySelector('#fname').value;
     var lname = document.querySelector('#lname').value;
     var email = document.querySelector('#email').value;
-    console.log({
-      fname: fname,
-      lname: lname,
-      email: email
-    });
     (0, _updateSettings.updateSettings)({
       fname: fname,
       lname: lname,
@@ -12283,23 +12276,18 @@ if (userPassForm) {
             passwordCurrent = document.querySelector('.password-current').value;
             password = document.querySelector('.password-new').value;
             passwordConfirm = document.querySelector('.password-confirm').value;
-            console.log({
-              passwordCurrent: passwordCurrent,
-              password: password,
-              passwordConfirm: passwordConfirm
-            });
-            _context.next = 8;
+            _context.next = 7;
             return (0, _updateSettings.updateSettings)({
               passwordCurrent: passwordCurrent,
               password: password,
               passwordConfirm: passwordConfirm
             }, 'password');
-          case 8:
+          case 7:
             document.querySelector('.btnUpdatePassword').textContent = 'Enregistrer les modifications';
             document.querySelector('.password-current').value = '';
             document.querySelector('.password').value = '';
             document.querySelector('.password-confirm').value = '';
-          case 12:
+          case 11:
           case "end":
             return _context.stop();
         }

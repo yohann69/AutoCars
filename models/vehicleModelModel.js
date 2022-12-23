@@ -27,7 +27,7 @@ modelSchema.pre(/^find/, function (next) {
 })
 
 modelSchema.post(/^find/, function (docs, next) {
-	console.log(`Query took ${Date.now() - this.start} milliseconds!`)
+	// console.log(`Query took ${Date.now() - this.start} milliseconds!`)
 	next();
 })
 

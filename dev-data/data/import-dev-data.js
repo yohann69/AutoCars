@@ -34,13 +34,13 @@ const Vehicles = JSON.parse(fs.readFileSync(`${__dirname}/vehicle.json`, 'UTF-8'
 const importDatabase = async () => {
 	try {
 		await Operation.create(Operations);
-		console.log("Operation created");
+		// console.log("Operation created");
 		await Model.create(Models);
-		console.log("Model created");
+		// console.log("Model created");
 		await Client.create(Clients);
-		console.log("Client created");
+		// console.log("Client created");
 		await Vehicle.create(Vehicles);
-		console.log("Vehicle created");
+		// console.log("Vehicle created");
 	} catch (e) {
 		console.error(e)
 	}
@@ -52,13 +52,13 @@ const importDatabase = async () => {
 const deleteData = async () => {
 	try {
 		await Operation.deleteMany();
-		console.log("Operation deleted");
+		// console.log("Operation deleted");
 		await Model.deleteMany();
-		console.log("Model deleted");
+		// console.log("Model deleted");
 		await Client.deleteMany();
-		console.log("Client deleted");
+		// console.log("Client deleted");
 		await Vehicle.deleteMany();
-		console.log("Vehicle deleted");
+		// console.log("Vehicle deleted");
 	} catch (e) {
 		console.error(e);
 	}

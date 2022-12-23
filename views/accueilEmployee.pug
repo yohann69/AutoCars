@@ -1,0 +1,48 @@
+extends base
+
+block content
+	main.menu 
+		a(href="emploisDuTemps")
+			article.btn-menu
+				img(src="img/rdv.png", alt="Emplois du temps")
+				h3 Emplois du temps
+		article.btn-menu.operations
+			img(src="img/operation.png", alt="Opérations")
+			h3 Opérations
+		a(href="informationsClients")
+			article.btn-menu.client
+				img(src="img/client.png", alt="Client")
+				h3 Informations Clients
+		article.btn-menu.piece
+			img(src="img/pieces.png", alt="Pièces")
+			h3 Pièces
+
+	
+
+	section.popupmenu.operations-full.hidden
+		main.menu
+			a(href="listeOperations")
+				article.btn-menu.listclient
+					img(src="img/operationsList.png", alt="Liste des clients")
+					h3 Liste des opérations à effectuer
+			a(href="operationsDuJour")
+				article.btn-menu.createclient
+					img(src="img/operationsToday.png", alt="Création client")
+					h3 Opérations du jour
+		button.back ✖
+
+	section.popupmenu.pieces-full.hidden
+		main.menu
+			a(href="creer-piece")
+				article.btn-menu.client
+					img(src="img/pieces.png", alt="Liste Pièces")
+					h3 Consulter le stock des pièces
+			a(href="liste-pieces")
+				article.btn-menu.facture
+					img(src="img/buyPieces.png", alt="Factures")
+					h3 Demander des pièces
+		button.back ✖
+
+
+
+	script(src="js/accueilEmployee.js")
