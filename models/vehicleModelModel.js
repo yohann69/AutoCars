@@ -13,6 +13,11 @@ const modelSchema = new mongoose.Schema({
 	brand: {
 		type: String,
 		required: [true, 'Un modèle doit avoir une marque.'],
+		trim: true,
+		enum:{
+			values: ['Audi', 'BMW', 'Citroen', 'Dacia', 'Fiat', 'Ford', 'Honda', 'Hyundai', 'Kia', 'Mazda', 'Mercedes', 'Mini', 'Nissan', 'Opel', 'Peugeot', 'Renault', 'Seat', 'Skoda', 'Suzuki', 'Toyota', 'Volkswagen', 'Volvo'],
+			message: 'La marque doit être une marque de voiture.'
+		}
 	},
 })
 

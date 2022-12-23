@@ -1,0 +1,47 @@
+extends base
+
+block content
+    main.interface 
+        h2= title
+
+        section
+            form.createuser
+                section
+                    .personalData
+                        h3 Informations personnelles
+                        label(for="fname") Prénom
+                        input(type="text", class="fname", placeholder="François", required)
+                        label(for="fname") Nom
+                        input(type="text", class="lname", placeholder="Duchemin", required)
+                        br
+                        label(for="fname") Adresse
+                        input(type="text", class="address", placeholder="1234 rue de la Paix", required)
+                        label(for="fname") Ville
+                        input(type="text", class="city", placeholder="Montréal", required)
+                        label(for="fname") Code postal
+                        input(type="text", class="postalCode", placeholder="H2T 2M4", required)
+
+                    .vehicledetails
+                        h3 Véhicule
+
+                        label(for="marque") Marque
+                        input(type="text", class="marque", placeholder="Ford", required)
+                        label(for="modele") Modèle
+                        input(type="text", class="modele", placeholder="Mustang", required)
+                        label(for="annee") Année
+                        input(type="text", class="annee", placeholder="2018", required)
+                        label(for="immatriculation") Immatriculation
+                        input(type="text", class="immatriculation", placeholder="ABC1234", required)
+                        label(for="serie") N° de série
+                        input(type="text", class="serie", placeholder="2UH287490YHU1IH", required)
+                    .contact
+                        h3 Contact
+                        label(for="email") Adresse e-mail
+                        input(type="email", class="email", placeholder="jean.dujardin@gmail.com", id="email", required)
+                        label(for="phone") Numéro de téléphone
+                        input(type="tel", class="phone", placeholder="06 12 34 56 78", id="phone", required)
+
+                .btn
+                    input(type="reset", value="Réinitialiser")
+                    input(type="submit", value="Créer l'utilisateur")
+                    

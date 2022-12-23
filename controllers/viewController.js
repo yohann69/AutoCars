@@ -1,29 +1,12 @@
-exports.getAccueilAdmin = (req, res) => {
-    res.status(200).render('accueilAdmin', {
-        title: 'Accueil'
+
+
+
+
+
+exports.getPresentation = (req, res) => {
+    res.status(200).render('prez', {
+        title: 'Présentation'
     })
-}
-
-exports.getAccueilChef = (req, res) => {
-    res.status(200).render('accueilChef', {
-        title: 'Accueil'
-    })
-}
-
-exports.getAccueilEmployee = (req, res) => {
-    res.status(200).render('accueilEmployee', {
-        title: 'Accueil'
-    })
-}
-
-
-
-
-
-exports.getPresentation =  (req, res) => {
-	res.status(200).render('prez', {
-		title: 'Présentation'
-	})
 }
 
 
@@ -46,6 +29,12 @@ exports.getAccount = (req, res) => {
 /*=============================================
     =            Administrator            =
 =============================================*/
+exports.getAccueilAdmin = (req, res) => {
+    res.status(200).render('accueilAdmin', {
+        title: 'Accueil'
+    })
+}
+
 exports.getCreateUser = (req, res) => {
     res.status(200).render('createUser', {
         title: 'Créer un utilisateur'
@@ -53,8 +42,44 @@ exports.getCreateUser = (req, res) => {
 }
 
 
+
+
+
+
+
 /*=============================================
-    =            404            =
+        =            Chief            =
+=============================================*/
+exports.getAccueilChef = (req, res) => {
+    res.status(200).render('accueilChef', {
+        title: 'Accueil'
+    })
+}
+
+exports.getCreateClient = (req, res) => {
+    res.status(200).render('createClient', {
+        title: 'Créer un client'
+    })
+}
+
+
+
+/*=============================================
+      =            Employee            =
+=============================================*/
+exports.getAccueilEmployee = (req, res) => {
+    res.status(200).render('accueilEmployee', {
+        title: 'Accueil'
+    })
+}
+
+
+
+
+
+
+/*=============================================
+        =            404            =
 =============================================*/
 exports.get404 = (req, res) => {
     res.status(404).render('error', {
