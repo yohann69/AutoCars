@@ -440,7 +440,9 @@ input[type="radio"]{
     border-bottom-right-radius: 8px;
     top: 0;
     z-index: 1;
+	color: black;
 }
+
 
 .alert--success {
 	background-color: #00ff00;

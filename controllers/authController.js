@@ -53,7 +53,16 @@ exports.signup = catchAsync(async (req, res, next) => {
 	// })											//
 	//////////////////////////////////////////////////
 
-	createSendToken(newUser, 201, res);
+	
+	// Remove password from output
+	newUser.password = undefined;
+
+	res.status(200).json({
+		status: 'success',
+		data: {
+			newUser
+		}
+	});
 
 });
 
