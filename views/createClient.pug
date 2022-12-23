@@ -5,35 +5,35 @@ block content
         h2= title
 
         section
-            form.createuser
+            form.createClient
                 section
                     .personalData
                         h3 Informations personnelles
                         label(for="fname") Prénom
                         input(type="text", class="fname", placeholder="François", required)
-                        label(for="fname") Nom
+                        label(for="lname") Nom
                         input(type="text", class="lname", placeholder="Duchemin", required)
                         br
                         label(for="fname") Adresse
                         input(type="text", class="address", placeholder="1234 rue de la Paix", required)
                         label(for="fname") Ville
-                        input(type="text", class="city", placeholder="Montréal", required)
+                        input(type="text", class="city", placeholder="Valence", required)
                         label(for="fname") Code postal
-                        input(type="text", class="postalCode", placeholder="H2T 2M4", required)
+                        input(type="number", class="postalCode", placeholder="26000", required)
 
                     .vehicledetails
                         h3 Véhicule
 
                         label(for="marque") Marque
-                        input(type="text", class="marque", placeholder="Ford", required)
+                        input(type="text", class="marque", placeholder="Ford")
                         label(for="modele") Modèle
-                        input(type="text", class="modele", placeholder="Mustang", required)
+                        input(type="text", class="modele", placeholder="Mustang")
                         label(for="annee") Année
-                        input(type="text", class="annee", placeholder="2018", required)
+                        input(type="text", class="annee", placeholder="2018")
                         label(for="immatriculation") Immatriculation
-                        input(type="text", class="immatriculation", placeholder="ABC1234", required)
+                        input(type="text", class="immatriculation", placeholder="AB-123-CD")
                         label(for="serie") N° de série
-                        input(type="text", class="serie", placeholder="2UH287490YHU1IH", required)
+                        input(type="text", class="serie", placeholder="2UH287490YHU1IH")
                     .contact
                         h3 Contact
                         label(for="email") Adresse e-mail

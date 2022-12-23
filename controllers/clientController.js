@@ -45,7 +45,7 @@ exports.createClient = catchAsync(async (req, res, next) => {
 	const newClient = await Client.create(req.body);
 
 	res.status(201).json({
-		status: 'Success',
+		status: 'success',
 		data: {
 			client: newClient
 		}
