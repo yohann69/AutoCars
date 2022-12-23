@@ -11856,6 +11856,7 @@ var hideAlert = function hideAlert() {
 };
 
 // Show alert message
+// type is either 'success' or 'error'
 exports.hideAlert = hideAlert;
 var showAlert = function showAlert(type, msg) {
   hideAlert();
@@ -12060,27 +12061,33 @@ var updateSettings = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          try {
-            url = type === 'password' ? '/api/v1/users/updateMyPassword' : '/api/v1/users/updateMe';
-            res = (0, _axios.default)({
-              method: 'PATCH',
-              url: url,
-              data: data
-            }); // console.log(res.data.status)
-            if (res.data.status === 'success') {
-              (0, _alert.showAlert)('Informations mises à jour avec succès!');
-              window.setTimeout(function () {
-                location.assign('/monCompte');
-              }, 1500);
-            }
-          } catch (err) {
-            (0, _alert.showAlert)(err.response.data.message);
+          _context.prev = 0;
+          url = type === 'password' ? '/api/v1/users/updateMyPassword' : '/api/v1/users/updateMe';
+          _context.next = 4;
+          return (0, _axios.default)({
+            method: 'patch',
+            url: url,
+            data: data
+          });
+        case 4:
+          res = _context.sent;
+          if (res.data.status === 'success') {
+            (0, _alert.showAlert)('success', 'Informations mises à jour avec succès!');
+            window.setTimeout(function () {
+              location.assign('/monCompte');
+            }, 1500);
           }
-        case 1:
+          _context.next = 11;
+          break;
+        case 8:
+          _context.prev = 8;
+          _context.t0 = _context["catch"](0);
+          (0, _alert.showAlert)('error', _context.t0.response.data.message);
+        case 11:
         case "end":
           return _context.stop();
       }
-    }, _callee);
+    }, _callee, null, [[0, 8]]);
   }));
   return function updateSettings(_x, _x2) {
     return _ref.apply(this, arguments);
@@ -12388,7 +12395,7 @@ if (userPassForm) {
           case 7:
             document.querySelector('.btnUpdatePassword').textContent = 'Enregistrer les modifications';
             document.querySelector('.password-current').value = '';
-            document.querySelector('.password').value = '';
+            document.querySelector('.password-new').value = '';
             document.querySelector('.password-confirm').value = '';
           case 11:
           case "end":

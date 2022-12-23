@@ -124,6 +124,7 @@ ul {
 	 justify-content: center; 
 }
 
+
 form {
 	display: flex;
 	justify-content: space-around;
@@ -428,4 +429,23 @@ input[type="radio"]{
 
  .btn-menu h3 {
     text-align: center;
+}
+
+
+.alert {
+    position: absolute;
+    background-color: #008bff;
+    padding: 20px 50px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    top: 0;
+    z-index: 1;
+}
+
+.alert--success {
+	background-color: #00ff00;
+}
+
+.alert--error {
+	background-color: #ff0000;
 }

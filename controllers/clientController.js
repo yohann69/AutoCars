@@ -60,7 +60,7 @@ exports.updateClient = catchAsync(async (req, res, next) => {
 	});
 
 	if (!client) {
-		return next(new AppError('Aucune opération avec cet ID', 404));
+		return next(new AppError('Aucun client avec cet ID', 404));
 	}
 
 	res.status(200).json({

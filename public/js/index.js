@@ -59,7 +59,7 @@ if (userPassForm) {
 
         document.querySelector('.btnUpdatePassword').textContent = 'Enregistrer les modifications';
         document.querySelector('.password-current').value = '';
-        document.querySelector('.password').value = '';
+        document.querySelector('.password-new').value = '';
         document.querySelector('.password-confirm').value = '';
     })
 }
