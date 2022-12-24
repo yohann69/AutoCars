@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
     },
     username: {
         type: String,
-        required: [true, "Veuillez spécifier un nom d'utilisateur"],
+        // required: [true, "Veuillez spécifier un nom d'utilisateur"],
         unique: true,
         trim: true,
         maxlength: [50, 'Le nom d\'utilisateur ne peut pas dépasser 50 caractères'],

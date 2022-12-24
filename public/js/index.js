@@ -70,7 +70,7 @@ if (registerForm) {
         e.preventDefault();
         const fname = document.querySelector('.fname').value;
         const lname = document.querySelector('.lname').value;
-        const username = document.querySelector('.username').value;
+        // const username = document.querySelector('.username').value;
         let role = document.querySelector('input[name="role"]:checked').value;
         if (role === "Administrateur") role = "admin";
         if (role === "Chef d'atelier") role = "chief";
@@ -79,7 +79,7 @@ if (registerForm) {
         const password = document.querySelector('.password').value;
         const passwordConfirm = document.querySelector('.passwordConfirm').value;
 
-        registerUser(fname, lname, role, username, email, password, passwordConfirm);
+        registerUser(fname, lname, role, /*username,*/ email, password, passwordConfirm);
     })
 }
 

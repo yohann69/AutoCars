@@ -11968,7 +11968,7 @@ var logout = /*#__PURE__*/function () {
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          (0, _alert.showAlert)(_context2.t0.response.data.message);
+          (0, _alert.showAlert)('error', _context2.t0.response.data.message);
         case 10:
         case "end":
           return _context2.stop();
@@ -11995,7 +11995,7 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var registerUser = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(fname, lname, role, username, email, password, passwordConfirm) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(fname, lname, role, /*username,*/email, password, passwordConfirm) {
     var res;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
@@ -12009,7 +12009,7 @@ var registerUser = /*#__PURE__*/function () {
               fname: fname,
               lname: lname,
               role: role,
-              username: username,
+              // username,
               email: email,
               password: password,
               passwordConfirm: passwordConfirm
@@ -12035,7 +12035,7 @@ var registerUser = /*#__PURE__*/function () {
       }
     }, _callee, null, [[0, 7]]);
   }));
-  return function registerUser(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
+  return function registerUser(_x, _x2, _x3, _x4, _x5, _x6) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -12413,7 +12413,7 @@ if (registerForm) {
     e.preventDefault();
     var fname = document.querySelector('.fname').value;
     var lname = document.querySelector('.lname').value;
-    var username = document.querySelector('.username').value;
+    // const username = document.querySelector('.username').value;
     var role = document.querySelector('input[name="role"]:checked').value;
     if (role === "Administrateur") role = "admin";
     if (role === "Chef d'atelier") role = "chief";
@@ -12421,7 +12421,7 @@ if (registerForm) {
     var email = document.querySelector('.email').value;
     var password = document.querySelector('.password').value;
     var passwordConfirm = document.querySelector('.passwordConfirm').value;
-    (0, _registerUser.registerUser)(fname, lname, role, username, email, password, passwordConfirm);
+    (0, _registerUser.registerUser)(fname, lname, role, /*username,*/email, password, passwordConfirm);
   });
 }
 if (createClientForm) {

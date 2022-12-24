@@ -1,5 +1,7 @@
 .eslintrc.json
 config.env
+credentials
+rights
 
 # Logs
 logs
