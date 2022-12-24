@@ -169,6 +169,11 @@ select {
 	margin: 5px 0;
 }
 
+input[type=submit], input[type=reset] {
+	margin: 0 5px;
+	width: 150px;
+}
+
 label {
 	color: white;
 }
