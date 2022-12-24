@@ -62,6 +62,13 @@ exports.getCreateClient = (req, res) => {
     })
 }
 
+exports.getManageClient = (req, res) => {
+    res.status(200).render('manageClient', {
+        title: 'Gestion des clients',
+        clients
+    })
+}
+
 
 
 /*=============================================

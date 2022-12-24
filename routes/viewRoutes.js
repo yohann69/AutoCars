@@ -21,6 +21,7 @@ router.get('/creerUtilisateur', authController.protect, authController.restrictT
 // Chief
 router.get('/accueilChef', authController.protect, authController.restrictTo('chief'), viewController.getAccueilChef);
 router.get('/creerClient', authController.protect, authController.restrictTo('chief'), viewController.getCreateClient);
+router.get('/gererClient', authController.protect, authController.restrictTo('chief'), viewController.getManageClient);
 
 
 

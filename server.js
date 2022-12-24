@@ -15,10 +15,11 @@ const app = require('./app.js');
 
 
 
-const db = process.env.DATABASE_mongodb.replace(
-	'<PASSWORD>',
-	process.env.DATABASE_PASSWORD
-);
+const db = process.env.DATABASE_mongodb
+// .replace(
+// 	'<PASSWORD>',
+// 	process.env.DATABASE_PASSWORD
+// );
 
 
 mongoose.connect(db, {

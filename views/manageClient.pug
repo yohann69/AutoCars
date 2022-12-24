@@ -1,0 +1,126 @@
+html 
+	head 
+		title AutoCars | #{title}
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='/css/liste.css')
+		link(rel='stylesheet', href='/css/gestion-utilisateur.css')
+		link(rel='shortcut icon', href='/img/favicon.ico')
+
+	body 
+		include _navbarChief
+		 
+		main.interface 
+			h2= title
+			section 
+				aside 
+					.recherche 
+						h3 Rechercher un utilisateur 
+						form
+							div
+								label(for="clientname") Nom
+								input(type="text", name="clientname", id="clientname", placeholder="Dujardin")
+							div
+								label(for="clientfname") Prénom
+								input(type="text", name="clientfname", id="clientfname", placeholder="Jean")
+							div
+								label(for="clientemail") Email
+								input(type="text", name="clientemail", id="clientemail", placeholder="jean.dujardin@mail.fr")
+							div
+								label(for="clientphone") Téléphone
+								input(type="text", name="clientphone", id="clientphone", placeholder="067816382029")
+
+							input(type="submit", value="Rechercher")
+
+					div
+						h3 Liste des clients 
+						ul.list 
+							li 
+								span Pierre Duchemin
+								a(href="#", class="consulter") Consulter
+							li 
+								span Cécile Metge
+								a(href="#", class="consulter") Consulter
+							li 
+								span Léa Jambon
+								a(href="#", class="consulter") Consulter
+							li 
+								span Dupond Dupont
+								a(href="#", class="consulter") Consulter
+							li 
+								span KatlyneDurand
+								a(href="#", class="consulter") Consulter
+							li 
+								span Martin Matin
+								a(href="#", class="consulter") Consulter
+							li 
+								span Saw Dazo
+								a(href="#", class="consulter") Consulter
+							li 
+								span Sylvain Charensol
+								a(href="#", class="consulter") Consulter
+							li 
+								span Guillaume De Sauvage
+								a(href="#", class="consulter") Consulter
+							li 
+								span Jean Dujardin
+								a(href="#", class="consulter") Consulter
+							li 
+								span Jeanne Dujardin
+								a(href="#", class="consulter") Consulter
+				
+				
+				div.details
+					h3 Détails du client
+					div
+						form.sectiondetails
+							div 
+								label Informations
+									
+								div
+									label(for="clientname") Nom
+									input(type="text", name="clientname", id="clientname", placeholder="Dujardin")
+								div
+									label(for="clientfname") Prénom
+									input(type="text", name="clientfname", id="clientfname", placeholder="Jean")
+								
+							div
+								label Contact
+								div
+									label(for="clientemail") Email
+									input(type="text", name="clientemail", id="clientemail", placeholder="jean.dujardin@mail.fr")
+								div
+									label(for="clientphone") Téléphone
+									input(type="text", name="clientphone", id="clientphone", placeholder="067816382029")
+
+							div
+								label Adresse
+								div
+									label(for="clientaddress") Adresse
+									input(type="text", name="clientaddress", id="clientaddress", placeholder="1 rue de la paix")
+								div
+									label(for="clientcity") Ville
+									input(type="text", name="clientcity", id="clientcity", placeholder="Paris")
+								div
+									label(for="clientzip") Code postal
+									input(type="text", name="clientzip", id="clientzip", placeholder="75000")
+							
+							div
+								label Véhicule
+								div 
+									label(for="clientcar") Marque
+									input(type="text", name="clientcar", id="clientcar", placeholder="Renault")
+								div
+									label(for="clientmodel") Modèle
+									input(type="text", name="clientmodel", id="clientmodel", placeholder="Clio")
+								div
+									label(for="clientyear") Année
+									input(type="text", name="clientyear", id="clientyear", placeholder="2010")
+								div
+									label(for="clientplate") Immatriculation
+									input(type="text", name="clientplate", id="clientplate", placeholder="AB-123-CD")
+
+					div
+						input(type="submit", value="Enregistrer")
+						input(type="submit", value="Supprimer")
+
+	script(src='js/bundle.js')
