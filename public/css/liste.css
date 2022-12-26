@@ -30,7 +30,7 @@ select{
 }
 
 .list ul{
-	max-height: 270px;
+	/* max-height: 270px; */
 	overflow: auto;
 }
 

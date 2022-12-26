@@ -3,7 +3,7 @@ import { login, logout } from './login.js';
 import { registerUser } from './registerUser.js';
 import { updateSettings } from './updateSettings.js';
 import { createClient, addCarToClient } from './createClient.js';
-import { createOperation, updateOperation, deleteOperation } from './operation.js';
+import { createOperation, showOperation, updateOperation, deleteOperation } from './operation.js';
 
 // DOM ELEMENTS
 const loginForm = document.querySelector('.loginForm');
@@ -13,7 +13,7 @@ const userPassForm = document.querySelector('.myAccountPassword');
 const registerForm = document.querySelector('.createuser');
 const createClientForm = document.querySelector('.createClient');
 const createOperationForm = document.querySelector('.createoperation');
-
+const manageOperation = document.querySelector('.manageOperation');
 // VALUES
 
 
@@ -110,5 +110,27 @@ if(createOperationForm) {
         const duration = document.querySelector('.opduration').value;
 
         createOperation(name, price, duration);
+    })
+}
+
+
+if (manageOperation) {
+    let operationList = document.querySelectorAll('.consulter');
+    let operationID;
+    for (let i = 0; i < operationList.length; i++) {
+        operationList[i].addEventListener('click', e => {
+            e.preventDefault();
+            operationID = e.target.className.split(' ')[1];
+            showOperation(operationID);
+        })
+    }
+
+    document.querySelector('.sectiondetails').addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.querySelector('.opname').value;
+        const price = document.querySelector('.opprice').value;
+        const duration = document.querySelector('.opduration').value;
+
+        updateOperation(operationID, name, price, duration);
     })
 }

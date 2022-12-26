@@ -1,0 +1,57 @@
+html 
+	head 
+		title AutoCars | #{title}
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='/css/liste.css')
+		link(rel='stylesheet', href='/css/gestion-utilisateur.css')
+		link(rel='shortcut icon', href='/img/favicon.ico')
+
+	body 
+		include _navbarChief
+		 
+		main.interface 
+			h2= title
+			section.manageOperation 
+				aside 
+					.recherche 
+						h3 Rechercher une opération 
+						form
+							div
+								label(for="clientname") Nom
+								input(type="text", name="clientname", id="clientname", placeholder="Dujardin")
+							
+
+							input(type="submit", value="Rechercher")
+
+					div
+						h3 Liste des opérations 
+						ul.list 
+							ul 
+								each operation in operations 
+									li 
+										span= operation.name
+										a(href="#", class=`consulter ${operation._id}`) Consulter
+
+				div.details
+					h3 Détails de l'opération
+					div
+						form.sectiondetails
+							div 
+								label Informations
+									
+								div
+									label(for="opname") Nom
+									input(type="text", name="opname", class="opname" required)
+								div
+									label(for="opprice") Prix (en €)
+									input(type="number", name="opprice", class="opprice" required)
+								div 
+									label(for="opduration") Durée (en minutes)
+									input(type="number", name="opduration", class="opduration" required)
+								
+							
+					div
+						input(type="button", value="Enregistrer")
+						input(type="submit", value="Supprimer")
+
+	script(src='js/bundle.js')
