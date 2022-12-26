@@ -1,22 +1,20 @@
 nav 
     section.nav-left 
-        a(href='#').nav-logo
+        a(href='accueilAdmin').nav-logo
             img(src='/img/logo.png', alt='logo')
         div 
             a(href='/accueilAdmin') Accueil
             div.dropdown-content
         div
-            a(href='#') Utilisateurs
+            a(href='/creerUtilisateur') Créer un utilisateur
             div.dropdown-content
-                a(href='/creerUtilisateur') Créer un utilisateur
-                a(href='/gererUtilisateur') Gestion des utilisateurs
         div
-            a(href='/admin') Statistiques
+            a(href='/statistiques') Statistiques
             div.dropdown-content
         div
             a(href='#') Opérations
             div.dropdown-content
-                a(href='/crerrOperation') Créer une opération
+                a(href='/creerOperation') Créer une opération
                 a(href='/gererOperation') Gérer les opérations
     section.nav-right
         img(src='/img/logout.png', alt='Déconnexion', class='logout')

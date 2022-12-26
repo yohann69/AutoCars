@@ -16,6 +16,9 @@ router.get('/monCompte', authController.protect, viewController.getAccount);
 // Admin
 router.get('/accueilAdmin', authController.protect, authController.restrictTo('admin'), viewController.getAccueilAdmin);
 router.get('/creerUtilisateur', authController.protect, authController.restrictTo('admin'), viewController.getCreateUser);
+router.get('/creerOperation', authController.protect, authController.restrictTo('admin'), viewController.getCreateOperation);
+router.get('/gererOperation', authController.protect, authController.restrictTo('admin'), viewController.getManageOperation);
+router.get('/statistiques', authController.protect, authController.restrictTo('admin'), viewController.getStatistics);
 
 
 // Chief

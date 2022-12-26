@@ -2,38 +2,30 @@ extends base
 
 block content
 	main.menu 
-		article.btn-menu.user
-			img(src="img/client.png", alt="Client")
-			h3 Utilisateurs
-		article.btn-menu.stats
-			img(src="img/stats.png", alt="Factures")
-			h3 Statistiques
-		article.btn-menu.piece
-			img(src="img/operation.png", alt="Pièces")
+		a(href="creerUtilisateur")
+			article.btn-menu
+				img(src="img/createClient.png", alt="Création utilisateur")
+				h3 Créer un utilisateur
+		a(href="statistiques")
+			article.btn-menu.client
+				img(src="img/stats.png", alt="Statistiques")
+				h3 Statistiques
+		article.btn-menu.operation
+			img(src="img/operation.png", alt="Operations")
 			h3 Opérations
 
-	section.popupmenu.user-full.hidden
-		main.menu
-			a(href="gestion-clients")
-				article.btn-menu.listclient
-					img(src="img/client.png", alt="Liste des clients")
-					h3 Gestion des utilisateurs
-			a(href="creer-client")
-				article.btn-menu.createclient
-					img(src="img/createClient.png", alt="Création client")
-					h3 Créer un utilisateur
-		button.back ✖
+	
 
 	section.popupmenu.operation-full.hidden
 		main.menu
 			a(href="creer-piece")
-				article.btn-menu.client
-					img(src="img/pieces.png", alt="Liste Pièces")
-					h3 Consulter le stock des pièces
+				article.btn-menu
+					img(src="img/operation.png", alt="Création opération")
+					h3 Créer une opération
 			a(href="liste-pieces")
-				article.btn-menu.facture
-					img(src="img/buyPieces.png", alt="Factures")
-					h3 Commander des pièces
+				article.btn-menu
+					img(src="img/operationsList.png", alt="Gestion opérations")
+					h3 Gérer les opérations
 		button.back ✖
 
 

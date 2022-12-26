@@ -1,3 +1,9 @@
+const User = require('../models/userModel')
+const Client = require('../models/clientModel')
+const Operation = require('../models/operationModel')
+const catchAsync = require('../utils/catchAsync')
+const AppError = require('../utils/appError')
+const APIFeatures = require('../utils/apiFeatures')
 
 
 
@@ -42,6 +48,32 @@ exports.getCreateUser = (req, res) => {
 }
 
 
+exports.getCreateOperation = (req, res) => {
+    res.status(200).render('createOperation', {
+        title: 'Créer une opération'
+    })
+}
+
+exports.getManageOperation = catchAsync(async (req, res) => {
+    // 1) Get operations data from collection
+    const operations = await Operation.find();
+
+
+    // 2) Build template
+
+    // 3) Render that template using user data from 1)
+
+    res.status(200).render('manageOperation', {
+        title: 'Gestion des opérations',
+        operations
+    })
+})
+
+exports.getStatistics = (req, res) => {
+    res.status(200).render('statistics', {
+        title: 'Statistiques'
+    })
+}
 
 
 

@@ -1,6 +1,6 @@
 nav 
     section.nav-left 
-        a(href='#').nav-logo
+        a(href='accueilChef').nav-logo
             img(src='/img/logo.png', alt='logo')
         div 
             a(href='/accueilChef') Accueil
@@ -8,23 +8,23 @@ nav
         div
             a(href='#') Rendez-vous
             div.dropdown-content
-                a(href='/creer-rdv') Créer un rendez-vous
-                a(href='/liste-rdv') Gestion des rendez-vous
+                a(href='/creerRDV') Créer un rendez-vous
+                a(href='/gererRDV') Gestion des rendez-vous
         div
             a(href='#') Clients & Véhicules
             div.dropdown-content
                 a(href='/gererClient') Gestion des clients
                 a(href='/creerClient') Créer un client
-                a(href='/gestion-vehicules') Gestion des véhicules
+                a(href='/gererVehicules') Gestion des véhicules
         div
             a(href='#') Factures
             div.dropdown-content
-                a(href='/creer-rdv') Créer une facture
-                a(href='/gestion-factures') Gestion des factures
+                a(href='/creerFacture') Créer une facture
+                a(href='/gererFacture') Gestion des factures
         div
             a(href='#') Pièces
             div.dropdown-content
-                a(href='/consulter-pieces') Consulter le stock des pièces
-                a(href='/commander-pieces') Commander des pièces
+                a(href='/listePieces') Consulter le stock des pièces
+                a(href='/commanderPieces') Commander des pièces
     section.nav-right
         img(src='/img/logout.png', alt='Déconnexion', class='logout')
