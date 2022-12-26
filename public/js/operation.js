@@ -22,6 +22,7 @@ export const createOperation = async (name, price, duration) => {
 }
 
 export const updateOperation = async (id, name, price, duration) => {
+    document.querySelector(".opSave").value = "Enregistrement..."
     try {
         const res = await axios({
             method: "patch",
@@ -40,6 +41,7 @@ export const updateOperation = async (id, name, price, duration) => {
             }, 1500);
         }
     } catch (err) {
+        document.querySelector(".opSave").value = "Enregistrer"
         showAlert("error", err.response.data.message);
     }
 }
@@ -51,9 +53,11 @@ export const deleteOperation = async id => {
             url: `/api/v1/operations/${id}`
         });
 
-        if (res.data.status === "success") {
-            showAlert("success", "Opération supprimée avec succès !");
-        }
+        showAlert("success", "Opération supprimée avec succès !");
+        window.setTimeout(() => {
+            location.assign('/gererOperation');
+        }, 1500);
+
     } catch (err) {
         showAlert("error", err.response.data.message);
     }

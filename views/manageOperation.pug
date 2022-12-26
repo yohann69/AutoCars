@@ -7,7 +7,7 @@ html
 		link(rel='shortcut icon', href='/img/favicon.ico')
 
 	body 
-		include _navbarChief
+		include _navbarAdmin
 		 
 		main.interface 
 			h2= title
@@ -51,7 +51,7 @@ html
 								
 							
 					div
-						input(type="button", value="Enregistrer")
-						input(type="submit", value="Supprimer")
+						input(type="button", class="opSave" value="Enregistrer")
+						input(type="submit", class="opDelete" value="Supprimer")
 
 	script(src='js/bundle.js')

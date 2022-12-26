@@ -72,7 +72,7 @@ if (registerForm) {
         e.preventDefault();
         const fname = document.querySelector('.fname').value;
         const lname = document.querySelector('.lname').value;
-        // const username = document.querySelector('.username').value;
+        const username = document.querySelector('.fname').value + document.querySelector('.lname').value;
         let role = document.querySelector('input[name="role"]:checked').value;
         if (role === "Administrateur") role = "admin";
         if (role === "Chef d'atelier") role = "chief";
@@ -81,7 +81,7 @@ if (registerForm) {
         const password = document.querySelector('.password').value;
         const passwordConfirm = document.querySelector('.passwordConfirm').value;
 
-        registerUser(fname, lname, role, /*username,*/ email, password, passwordConfirm);
+        registerUser(fname, lname, role, username, email, password, passwordConfirm);
     })
 }
 
@@ -102,7 +102,7 @@ if (createClientForm) {
 }
 
 
-if(createOperationForm) {
+if (createOperationForm) {
     createOperationForm.addEventListener('submit', e => {
         e.preventDefault();
         const name = document.querySelector('.opname').value;
@@ -116,7 +116,7 @@ if(createOperationForm) {
 
 if (manageOperation) {
     let operationList = document.querySelectorAll('.consulter');
-    let operationID;
+    let operationID = "";
     for (let i = 0; i < operationList.length; i++) {
         operationList[i].addEventListener('click', e => {
             e.preventDefault();
@@ -125,12 +125,20 @@ if (manageOperation) {
         })
     }
 
-    document.querySelector('.sectiondetails').addEventListener('submit', e => {
-        e.preventDefault();
-        const name = document.querySelector('.opname').value;
-        const price = document.querySelector('.opprice').value;
-        const duration = document.querySelector('.opduration').value;
+    document.querySelector('.opSave').addEventListener('click', e => {
+        if (operationID != "") {
+            e.preventDefault();
+            const name = document.querySelector('.opname').value;
+            const price = document.querySelector('.opprice').value;
+            const duration = document.querySelector('.opduration').value;
 
-        updateOperation(operationID, name, price, duration);
+            updateOperation(operationID, name, price, duration);
+        }
+    })
+
+    document.querySelector('.opDelete').addEventListener('click', e => {
+        if (operationID != "") {
+            deleteOperation(operationID);
+        }
     })
 }

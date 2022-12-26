@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { showAlert } from './alert';
 
-export const registerUser = async (fname, lname, role, /*username,*/ email, password, passwordConfirm) => {
+export const registerUser = async (fname, lname, role, username, email, password, passwordConfirm) => {
     try {
         const res = await axios({
             method: 'post',
@@ -10,7 +10,7 @@ export const registerUser = async (fname, lname, role, /*username,*/ email, pass
                 fname,
                 lname,
                 role,
-                // username,
+                username,
                 email,
                 password,
                 passwordConfirm
