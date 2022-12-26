@@ -45,7 +45,7 @@ exports.createVehicle = catchAsync(async (req, res, next) => {
 	const newVehicle = await Vehicle.create(req.body);
 
 	res.status(201).json({
-		status: 'Success',
+		status: 'success',
 		data: {
 			vehicle: newVehicle
 		}

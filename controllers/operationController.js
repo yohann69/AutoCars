@@ -54,7 +54,7 @@ exports.createOperation = catchAsync(async (req, res, next) => {
 	const newOperation = await Operation.create(req.body);
 
 	res.status(201).json({
-		status: 'Success',
+		status: 'success',
 		data: {
 			operation: newOperation
 		}

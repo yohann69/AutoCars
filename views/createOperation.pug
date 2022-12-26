@@ -1,0 +1,19 @@
+extends base
+
+block content 
+    main.interface 
+        h2= title
+        section 
+            form.createoperation
+                section 
+                    .operationdetails
+                        h3 Détails de l'opération
+                        label(for="opname") Nom
+                        input(type="text", class="opname", placeholder="Changement peneux", required)
+                        label(for="opprice") Prix (en €)
+                        input(type="number", class="opprice", placeholder="100", required)
+                        label(for="opduration") Durée (en minutes)
+                        input(type="number", class="opduration", placeholder="30", required)
+                .btn
+                    input(type="reset", value="Réinitialiser")
+                    input(type="submit", value="Créer l'opération")

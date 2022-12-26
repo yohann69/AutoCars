@@ -22,13 +22,13 @@ router
 router
 	.route('/')
 	.get(authController.protect, operationController.getAllOperations) // if error on protect the next one isn't called
-	.post(operationController.createOperation);
+	.post(authController.protect, authController.restrictTo('admin'), operationController.createOperation);
 
 
 router
 	.route('/:id')
 	.get(operationController.getOperation)
-	.patch(operationController.updateOperation)
+	.patch(authController.protect, authController.restrictTo('admin'), operationController.updateOperation)
 	.delete(authController.protect, authController.restrictTo('admin'), operationController.deleteOperation);
 
 

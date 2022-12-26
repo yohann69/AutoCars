@@ -3,6 +3,7 @@ import { login, logout } from './login.js';
 import { registerUser } from './registerUser.js';
 import { updateSettings } from './updateSettings.js';
 import { createClient, addCarToClient } from './createClient.js';
+import { createOperation, updateOperation, deleteOperation } from './operation.js';
 
 // DOM ELEMENTS
 const loginForm = document.querySelector('.loginForm');
@@ -11,6 +12,7 @@ const userDataForm = document.querySelector('.myAccountData');
 const userPassForm = document.querySelector('.myAccountPassword');
 const registerForm = document.querySelector('.createuser');
 const createClientForm = document.querySelector('.createClient');
+const createOperationForm = document.querySelector('.createoperation');
 
 // VALUES
 
@@ -83,7 +85,7 @@ if (registerForm) {
     })
 }
 
-if(createClientForm) {
+if (createClientForm) {
     createClientForm.addEventListener('submit', e => {
         e.preventDefault();
         const fname = document.querySelector('.fname').value;
@@ -96,5 +98,17 @@ if(createClientForm) {
 
 
         createClient(fname, lname, phone, email, address, city, postalCode);
+    })
+}
+
+
+if(createOperationForm) {
+    createOperationForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.querySelector('.opname').value;
+        const price = document.querySelector('.opprice').value;
+        const duration = document.querySelector('.opduration').value;
+
+        createOperation(name, price, duration);
     })
 }
