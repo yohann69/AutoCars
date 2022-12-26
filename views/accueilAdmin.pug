@@ -2,63 +2,29 @@ extends base
 
 block content
 	main.menu 
-		article.btn-menu.rdv
-			img(src="img/rdv.png", alt="Rendez-vous")
-			h3 Rendez-vous
-		article.btn-menu.client
+		article.btn-menu.user
 			img(src="img/client.png", alt="Client")
-			h3 Clients et Véhicules
-		article.btn-menu.facture
-			img(src="img/factures.png", alt="Factures")
-			h3 Factures
+			h3 Utilisateurs
+		article.btn-menu.stats
+			img(src="img/stats.png", alt="Factures")
+			h3 Statistiques
 		article.btn-menu.piece
-			img(src="img/pieces.png", alt="Pièces")
-			h3 Pièces
+			img(src="img/operation.png", alt="Pièces")
+			h3 Opérations
 
-	section.popupmenu.rdv-full.hidden
-		main.menu
-			a(href="creer-rdv")
-				article.btn-menu.newrdv
-					img(src="img/createRdv.png", alt="Nouveau rendez-vous")
-					h3 Créer un rendez-vous
-			a(href="liste-rdv")
-				article.btn-menu.listrdv
-					img(src="img/searchRdv.png", alt="Liste rendez-vous")
-					h3 Consulter les rendez-vous
-		button.back ✖
-
-	section.popupmenu.client-full.hidden
+	section.popupmenu.user-full.hidden
 		main.menu
 			a(href="gestion-clients")
 				article.btn-menu.listclient
 					img(src="img/client.png", alt="Liste des clients")
-					h3 Gestion des clients
+					h3 Gestion des utilisateurs
 			a(href="creer-client")
 				article.btn-menu.createclient
 					img(src="img/createClient.png", alt="Création client")
-					h3 Créer un client
-			a(href="gestion-vehicules")
-				article.btn-menu.managevehicles
-					img(src="img/car.png", alt="Création client")
-					h3 Gestion des véhicules
+					h3 Créer un utilisateur
 		button.back ✖
 
-	section.popupmenu.facture-full.hidden
-		main.menu
-			a(href="creer-rdv")
-				article.btn-menu.client
-					img(src="img/createFacture.png", alt="Créer facture")
-					h3 Créer un devis
-			a(href="gestion-factures")
-				article.btn-menu.facture
-					img(src="img/factures.png", alt="Liste factures")
-					h3 Consulter les factures
-		button.back ✖
-
-
-
-
-	section.popupmenu.pieces-full.hidden
+	section.popupmenu.operation-full.hidden
 		main.menu
 			a(href="creer-piece")
 				article.btn-menu.client
@@ -72,4 +38,4 @@ block content
 
 
 
-	script(src="js/accueilChef.js")
+	script(src="js/accueilAdmin.js")
