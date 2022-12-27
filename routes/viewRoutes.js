@@ -25,6 +25,7 @@ router.get('/statistiques', authController.protect, authController.restrictTo('a
 router.get('/accueilChef', authController.protect, authController.restrictTo('chief'), viewController.getAccueilChef);
 router.get('/creerClient', authController.protect, authController.restrictTo('chief'), viewController.getCreateClient);
 router.get('/gererClient', authController.protect, authController.restrictTo('chief'), viewController.getManageClient);
+router.get('/gererVehicules', authController.protect, authController.restrictTo('chief'), viewController.getManageVehicules);
 
 
 

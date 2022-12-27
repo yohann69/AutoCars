@@ -101,6 +101,13 @@ exports.getManageClient = (req, res) => {
     })
 }
 
+exports.getManageVehicules = (req, res) => {
+    res.status(200).render('manageVehicles', {
+        title: 'Gestion des véhicules',
+        // brand,
+        // model
+    })
+}
 
 
 /*=============================================

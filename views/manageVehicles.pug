@@ -1,0 +1,66 @@
+html 
+	head 
+		title AutoCars | #{title}
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='/css/liste.css')
+		link(rel='stylesheet', href='/css/gestion-utilisateur.css')
+		link(rel='shortcut icon', href='/img/favicon.ico')
+
+	body 
+		include _navbarAdmin
+		 
+		main.interface
+			h2= title
+			section
+				aside
+					div.recherche
+						h3 Rechercher un véhicule
+						form(action='')
+							div
+								label(for='marque') Marque
+								input(type='text', name='marque', id='marque', placeholder='Nissan', list='listemarques')
+								datalist(id='listemarques')
+									
+									
+							input(type='submit', value='Rechercher')
+
+					div
+						h3 Liste des véhicules
+						ul.list 
+							ul 
+								//- each operation in operations 
+								//- 	li 
+								//- 		span= operation.name
+								//- 		a(href="#", class=`consulter ${operation._id}`) Consulter
+
+
+					
+				.details 
+					h3 Détails du véhicule
+					form.sectiondetails
+						div
+							label(for='clientname') Informations
+							div
+								label(for='detailsmarque') Marque
+								input(type='text', name='detailsmarque', id='detailsmarque', value='Ford')
+							div
+								label(for='detailsmodele') Modèle
+								input(type='text', name='detailsmodele', id='detailsmodele', value='Fiesta')
+							div
+								label(for='detailsannee') Année
+								input(type='number', name='detailsannee', id='detailsannee', value='2021')
+						//- div
+						//- 	label Véhicule
+						//- 	div
+						//- 		label(for='detailsnbclients') Nombre de client le possédant
+						//- 		input(type='number', class='detailsnbclients', value='1')
+					div
+						input(type='submit', value='Modifier')
+						input(type='submit', value='Supprimer')
+				
+				
+
+									
+
+
+	script(src='js/bundle.js')

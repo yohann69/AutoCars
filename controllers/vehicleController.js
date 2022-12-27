@@ -23,7 +23,7 @@ exports.getAllVehicles = catchAsync(async (req, res, next) => {
 	})
 })
 
-exports.getVehicle = catchAsync(async (req, res, next) => {  // For optional parameters add ? at the end (ex: /api/v1/vehicles/:id?)
+exports.getVehicle = catchAsync(async (req, res, next) => {  
 	const vehicle = await Vehicle.findById(req.params.id);
 
 	if (!vehicle) {

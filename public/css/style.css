@@ -129,7 +129,6 @@ form {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	/* width: 5; */
 	height: 100%;
 	align-items: center;
 	width: 100%;

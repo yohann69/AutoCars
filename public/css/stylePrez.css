@@ -1,17 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
     transition: all 0.3s ease-in-out;
+
 }
 
 h1 {
     font-size: 200%;
 }
 
-nav{
+nav {
     position: absolute;
     top: 0;
     padding: 20px 50px;
@@ -21,7 +22,8 @@ nav{
     align-items: center;
 
 }
-nav img{
+
+nav img {
     width: 90px;
     height: 35px;
 }
@@ -31,19 +33,19 @@ nav a {
     color: #000;
     font-size: 120%;
     margin-left: 20px;
-    padding : 7px 15px;
+    padding: 7px 15px;
     border-radius: 100px;
     border: 2px solid #000;
     font-size: 110%;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: #000;
     color: #fff;
 }
 
 
-.home{
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,11 +55,13 @@ nav a:hover{
     height: 100vh;
     background-color: #f5f5f5;
 }
+
 .home h1 {
     font-size: 400%;
     margin-bottom: 20px;
 }
-.home svg{
+
+.home svg {
     top: 0;
     position: absolute;
 }
@@ -65,5 +69,62 @@ nav a:hover{
 
 /* Functionnalities */
 .functionnalities {
-    
+    padding: 60px 50px;
+    background-color: #373434;
+    height: 150vh;
+    overflow: auto;
+
+}
+
+.functionnalities::-webkit-scrollbar {
+    display: none;
+}
+
+
+.functionnalities h2 {
+    color: #fff;
+    font-size: 300%;
+    margin-bottom: 20px;
+}
+
+.functionnalities * {
+    text-align: center;
+}
+
+.functionnalities>section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 600px;
+    /* background-color: #f5f5f5; */
+}
+
+.functionnalities article {
+    min-width: 250px;
+    min-height: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.manageVehicles {
+    background: linear-gradient(112deg, #ffc300, #fff78a);
+}
+
+.manageInvoices {
+    background: linear-gradient(56deg, #37dd40, #a1e0b3);
+}
+
+.manageStocks{
+    background: linear-gradient(239deg, #ff0000, #ff7f7f);
+}
+
+.manageAppointments {
+    background: linear-gradient(180deg, #396cfe, #7fdaff);
 }
