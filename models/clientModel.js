@@ -55,6 +55,22 @@ const clientSchema = new mongoose.Schema({
 
 
 
+// Query Middleware
+clientSchema.pre(/^find/, function (next) {
+	// this.find({ secretClient: { $ne: true } })
+
+	this.start = Date.now();
+	next();
+})
+
+clientSchema.post(/^find/, function (docs, next) {
+	// console.log(`Query took ${Date.now() - this.start} milliseconds!`)
+	next();
+})
+
+
 
 const Client = mongoose.model('Client', clientSchema);
+
+
 module.exports = Client;

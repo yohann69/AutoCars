@@ -7,11 +7,22 @@ const router = express.Router();
 // router.param('id', operationController.checkID);
 
 
+router
+	.route('/cheapest-operation')
+	.get(operationController.aliasCheapestOperation, operationController.getAllOperations)
+
+
+
+router
+	.route('/stats')
+	.get(operationController.getOperationStats);
+
+
 
 router
 	.route('/')
-	.get(operationController.getAllOperations) // if error on protect the next one isn't called
-	.post(operationController.createOperation);
+	.get(authController.protect, operationController.getAllOperations) // if error on protect the next one isn't called
+	.post(authController.protect, authController.restrictTo('admin'), operationController.createOperation);
 
 
 router
