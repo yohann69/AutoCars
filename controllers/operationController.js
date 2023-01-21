@@ -4,12 +4,6 @@ const APIFeatures = require('./../utils/apiFeatures');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 
-exports.aliasCheapestOperation = (req, res, next) => {
-	req.query.limit = '1';
-	req.query.sort = 'price';
-
-	next();
-}
 
 
 
@@ -50,6 +44,19 @@ exports.getOperation = catchAsync(async (req, res, next) => {  // For optional p
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 exports.createOperation = catchAsync(async (req, res, next) => {
 	const newOperation = await Operation.create(req.body);
 
@@ -60,6 +67,25 @@ exports.createOperation = catchAsync(async (req, res, next) => {
 		}
 	})
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 exports.updateOperation = catchAsync(async (req, res, next) => {
 	const operation = await Operation.findByIdAndUpdate(req.params.id, req.body, {
@@ -108,14 +134,7 @@ exports.getOperationStats = catchAsync(async (req, res, next) => {
 				minDuration: { $min: '$duration' },
 			}
 		},
-		// {
-		//     $sort: {
-		//         averagePrice: 1
-		//     }
-		// },
-		// {
-		//     $match: { _id: { $ne: 'EASY'}} // ne => not equal 
-		// }
+
 	]);
 	res.status(200).json({
 		status: 'success',
