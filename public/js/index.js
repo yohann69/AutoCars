@@ -15,7 +15,7 @@ const createClientForm = document.querySelector('.createClient');
 const createOperationForm = document.querySelector('.createoperation');
 const manageOperation = document.querySelector('.manageOperation');
 // VALUES
-
+ 
 
 // DELEGATION
 
