@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/connexion', viewController.getLoginForm);
 
 // Global
-router.get('/', viewController.getPresentation);
+router.get('/', viewController.getLoginForm);
 
 router.get('/monCompte', authController.protect, viewController.getAccount);
 
