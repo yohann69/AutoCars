@@ -63,7 +63,7 @@ exports.createOperation = catchAsync(async (req, res, next) => {
 
 exports.updateOperation = catchAsync(async (req, res, next) => {
 	const operation = await Operation.findByIdAndUpdate(req.params.id, req.body, {
-		rew: true,
+		new: true,
 		runValidators: true
 	});
 

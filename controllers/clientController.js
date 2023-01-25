@@ -55,7 +55,7 @@ exports.createClient = catchAsync(async (req, res, next) => {
 
 exports.updateClient = catchAsync(async (req, res, next) => {
 	const client = await Client.findByIdAndUpdate(req.params.id, req.body, {
-		rew: true,
+		new: true,
 		runValidators: true
 	});
 
